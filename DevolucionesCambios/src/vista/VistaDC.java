@@ -6,6 +6,9 @@
 package vista;
 
 import javax.swing.JButton;
+import javax.swing.JLayeredPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 /**
  *
@@ -18,6 +21,9 @@ public class VistaDC extends javax.swing.JFrame {
      */
     public VistaDC() {
         initComponents();
+        
+        
+
     }
 
     /**
@@ -29,35 +35,80 @@ public class VistaDC extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btn_devoluciones = new javax.swing.JButton();
+        contenPane = new javax.swing.JPanel();
+        layered_pane = new javax.swing.JLayeredPane();
+        panel1 = new javax.swing.JPanel();
+        txt_num_ticket = new javax.swing.JTextField();
         btn_cambios = new javax.swing.JButton();
+        btn_dev = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btn_devoluciones.setText("Devoluciones");
-        btn_devoluciones.setToolTipText("Presiona si quieres Devoluciones");
+        layered_pane.setLayout(new java.awt.GridLayout());
+
+        txt_num_ticket.setText("02983791");
+        txt_num_ticket.setToolTipText("Ingresa Numero de ticket");
+        txt_num_ticket.setVisible(false);
+
+        javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
+        panel1.setLayout(panel1Layout);
+        panel1Layout.setHorizontalGroup(
+            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel1Layout.createSequentialGroup()
+                .addGap(175, 175, 175)
+                .addComponent(txt_num_ticket, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(187, Short.MAX_VALUE))
+        );
+        panel1Layout.setVerticalGroup(
+            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel1Layout.createSequentialGroup()
+                .addGap(68, 68, 68)
+                .addComponent(txt_num_ticket, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(137, Short.MAX_VALUE))
+        );
+
+        layered_pane.add(panel1);
 
         btn_cambios.setText("Cambios");
+
+        btn_dev.setText("Devoluciones");
+
+        javax.swing.GroupLayout contenPaneLayout = new javax.swing.GroupLayout(contenPane);
+        contenPane.setLayout(contenPaneLayout);
+        contenPaneLayout.setHorizontalGroup(
+            contenPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(contenPaneLayout.createSequentialGroup()
+                .addGap(136, 136, 136)
+                .addComponent(btn_dev)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_cambios)
+                .addGap(98, 98, 98))
+            .addGroup(contenPaneLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(layered_pane))
+        );
+        contenPaneLayout.setVerticalGroup(
+            contenPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenPaneLayout.createSequentialGroup()
+                .addGap(76, 76, 76)
+                .addGroup(contenPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_cambios)
+                    .addComponent(btn_dev))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(layered_pane))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(btn_devoluciones)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
-                .addComponent(btn_cambios)
-                .addGap(94, 94, 94))
+            .addComponent(contenPane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_devoluciones)
-                    .addComponent(btn_cambios))
-                .addContainerGap(127, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(contenPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -107,15 +158,39 @@ public class VistaDC extends javax.swing.JFrame {
     }
 
     public JButton getBtn_devoluciones() {
-        return btn_devoluciones;
+        return btn_dev;
     }
 
     public void setBtn_devoluciones(JButton btn_devoluciones) {
-        this.btn_devoluciones = btn_devoluciones;
+        this.btn_dev = btn_devoluciones;
     }
+    
+    public JLayeredPane getLayered_pane() {
+        return layered_pane;
+    }
+    
+
+//    public JPanel getPnl_verifi_compra() {
+//        return pnl_verifi_compra;
+//    }
+
+    public JTextField getTxt_num_ticket() {
+        return txt_num_ticket;
+    }
+
+    public JPanel getPanel1() {
+        return panel1;
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_cambios;
-    private javax.swing.JButton btn_devoluciones;
+    private javax.swing.JButton btn_dev;
+    private javax.swing.JPanel contenPane;
+    private javax.swing.JLayeredPane layered_pane;
+    private javax.swing.JPanel panel1;
+    private javax.swing.JTextField txt_num_ticket;
     // End of variables declaration//GEN-END:variables
+
+    
 }

@@ -18,11 +18,14 @@ public class Controlador implements ActionListener{
 
     private VistaDC ventana_p;
     private Venta venta;
+    private ActionListener escucha;
     
     public Controlador(VistaDC ventana_p, Venta venta){
         this.ventana_p  = ventana_p;
         this.venta      = venta;
         ventana_p.getBtn_cambios().addActionListener(this);
+        ventana_p.getBtn_devoluciones().addActionListener(this);
+        
     }
     
     public void iniciar(){
@@ -34,10 +37,20 @@ public class Controlador implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         
         Object c = e.getSource();
-        if( c.equals(ventana_p.getBtn_cambios()) ){
+        if( c.equals(ventana_p.getBtn_cambios()) || c.equals(ventana_p.getBtn_devoluciones()) ) 
+        {
             System.out.println("Hola mundo");
+            //Pedimos el codigo de barras o el numero del ticket
+                
+                ventana_p.getLayeredPane().repaint();
+                ventana_p.getLayeredPane().revalidate();
+                //ventana_p.getLayeredPane().setVisible(true);
+                ventana_p.getTxt_num_ticket().setVisible(true);
+            
         }        
-
+        
     }
+    
+    
   
 }
