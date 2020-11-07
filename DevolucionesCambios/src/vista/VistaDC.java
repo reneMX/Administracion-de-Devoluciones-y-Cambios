@@ -5,10 +5,19 @@
  */
 package vista;
 
+import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.event.ActionListener;
+import java.awt.event.AdjustmentListener;
+import javafx.event.ActionEvent;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.table.TableCellRenderer;
+import javax.swing.table.TableColumnModel;
 
 /**
  *
@@ -21,9 +30,18 @@ public class VistaDC extends javax.swing.JFrame {
      */
     public VistaDC() {
         initComponents();
+        contenPane.setPreferredSize(new Dimension(400,400));
+        //scbar_inicio.addAdjustmentListener((AdjustmentListener) this);
         
         
+        
+         
+        
+    }
+    
 
+    public JPanel getPanel_info() {
+        return panel_info;
     }
 
     /**
@@ -35,84 +53,177 @@ public class VistaDC extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane3 = new javax.swing.JScrollPane();
+        scbar_inicio = new javax.swing.JScrollPane();
         contenPane = new javax.swing.JPanel();
-        layered_pane = new javax.swing.JLayeredPane();
-        panel1 = new javax.swing.JPanel();
-        txt_num_ticket = new javax.swing.JTextField();
         btn_cambios = new javax.swing.JButton();
         btn_dev = new javax.swing.JButton();
+        lbl_num_venta = new javax.swing.JLabel();
+        txt_num_tck = new javax.swing.JTextField();
+        lbl_icon = new javax.swing.JLabel();
+        lbl_opccion = new javax.swing.JLabel();
+        btn_validar = new javax.swing.JButton();
+        panel_info = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tbl_info = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        layered_pane.setLayout(new java.awt.GridLayout());
+        scbar_inicio.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
 
-        txt_num_ticket.setText("02983791");
-        txt_num_ticket.setToolTipText("Ingresa Numero de ticket");
-        txt_num_ticket.setVisible(false);
-
-        javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
-        panel1.setLayout(panel1Layout);
-        panel1Layout.setHorizontalGroup(
-            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel1Layout.createSequentialGroup()
-                .addGap(175, 175, 175)
-                .addComponent(txt_num_ticket, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(187, Short.MAX_VALUE))
-        );
-        panel1Layout.setVerticalGroup(
-            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel1Layout.createSequentialGroup()
-                .addGap(68, 68, 68)
-                .addComponent(txt_num_ticket, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(137, Short.MAX_VALUE))
-        );
-
-        layered_pane.add(panel1);
+        contenPane.setBackground(new java.awt.Color(255, 255, 255));
 
         btn_cambios.setText("Cambios");
+        btn_cambios.setToolTipText("Solo presiona una vez");
+        btn_cambios.setVisible(false);
 
         btn_dev.setText("Devoluciones");
+        btn_dev.setToolTipText("Solo presiona una vez");
+        btn_dev.setVisible(false);
+
+        lbl_num_venta.setText("Ingresa el numero de ticket o venta");
+
+        txt_num_tck.setText("18749");
+        txt_num_tck.setToolTipText("Deben de ser 5 digitos");
+        txt_num_tck.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_num_tckActionPerformed(evt);
+            }
+        });
+        txt_num_tck.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_num_tckKeyTyped(evt);
+            }
+        });
+
+        lbl_icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/LineClothesLogoIcon.jpg"))); // NOI18N
+        lbl_icon.setToolTipText("");
+        lbl_icon.setMaximumSize(new java.awt.Dimension(140, 140));
+        lbl_icon.setMinimumSize(new java.awt.Dimension(140, 140));
+
+        lbl_opccion.setText("Selecciona Lo que deseas realizar");
+        lbl_opccion.setVisible(false);
+
+        btn_validar.setText("Validar");
+
+        tbl_info.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Fecha", "Num venta", "Empleado", "Tienda", "Direccion", "Total"
+            }
+        ));
+        jScrollPane2.setViewportView(tbl_info);
+
+        panel_info.setVisible(false);
+
+        javax.swing.GroupLayout panel_infoLayout = new javax.swing.GroupLayout(panel_info);
+        panel_info.setLayout(panel_infoLayout);
+        panel_infoLayout.setHorizontalGroup(
+            panel_infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_infoLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 736, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(14, Short.MAX_VALUE))
+        );
+        panel_infoLayout.setVerticalGroup(
+            panel_infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_infoLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout contenPaneLayout = new javax.swing.GroupLayout(contenPane);
         contenPane.setLayout(contenPaneLayout);
         contenPaneLayout.setHorizontalGroup(
             contenPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contenPaneLayout.createSequentialGroup()
-                .addGap(136, 136, 136)
-                .addComponent(btn_dev)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_cambios)
-                .addGap(98, 98, 98))
+                .addComponent(lbl_icon, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addComponent(lbl_num_venta, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(txt_num_tck, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(75, 75, 75)
+                .addComponent(btn_validar)
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(contenPaneLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(layered_pane))
+                .addGap(14, 14, 14)
+                .addComponent(panel_info, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(contenPaneLayout.createSequentialGroup()
+                .addGap(184, 184, 184)
+                .addComponent(btn_dev)
+                .addGap(175, 175, 175)
+                .addComponent(btn_cambios)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenPaneLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbl_opccion, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(279, 279, 279))
         );
         contenPaneLayout.setVerticalGroup(
             contenPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenPaneLayout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addGroup(contenPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_cambios)
-                    .addComponent(btn_dev))
+            .addGroup(contenPaneLayout.createSequentialGroup()
+                .addGroup(contenPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_icon, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(contenPaneLayout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addGroup(contenPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbl_num_venta)
+                            .addComponent(txt_num_tck)
+                            .addComponent(btn_validar))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(layered_pane))
+                .addComponent(panel_info, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lbl_opccion, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(contenPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_dev, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_cambios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(66, 66, 66))
         );
+
+        scbar_inicio.setViewportView(contenPane);
+
+        jScrollPane3.setViewportView(scbar_inicio);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(contenPane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 801, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(contenPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txt_num_tckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_num_tckActionPerformed
+        // TODO add your handling code here:
+       
+        
+    }//GEN-LAST:event_txt_num_tckActionPerformed
+
+    private void txt_num_tckKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_num_tckKeyTyped
+//        // TODO add your handling code here:
+//         Object c = evt.getSource();
+//        if(c.equals(txt_num_tck))
+//        {
+//            lbl_opccion.setVisible(false);
+//            btn_cambios.setVisible(false);
+//            btn_dev.setVisible(false);
+//            lbl_num_venta.setText("Ingresa el numero de ticket o venta");
+//        }
+    }//GEN-LAST:event_txt_num_tckKeyTyped
 
     /**
      * @param args the command line arguments
@@ -164,33 +275,44 @@ public class VistaDC extends javax.swing.JFrame {
     public void setBtn_devoluciones(JButton btn_devoluciones) {
         this.btn_dev = btn_devoluciones;
     }
-    
-    public JLayeredPane getLayered_pane() {
-        return layered_pane;
-    }
-    
 
-//    public JPanel getPnl_verifi_compra() {
-//        return pnl_verifi_compra;
-//    }
-
-    public JTextField getTxt_num_ticket() {
-        return txt_num_ticket;
+    public JButton getBtn_validar() {
+        return btn_validar;
     }
 
-    public JPanel getPanel1() {
-        return panel1;
+    public JLabel getLbl_opccion() {
+        return lbl_opccion;
     }
-    
+
+    public JLabel getLbl_num_venta() {
+        return lbl_num_venta;
+    }
+
+    public JTextField getTxt_num_tck() {
+        return txt_num_tck;
+    }
+
+   
+        
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_cambios;
     private javax.swing.JButton btn_dev;
+    private javax.swing.JButton btn_validar;
     private javax.swing.JPanel contenPane;
-    private javax.swing.JLayeredPane layered_pane;
-    private javax.swing.JPanel panel1;
-    private javax.swing.JTextField txt_num_ticket;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JLabel lbl_icon;
+    private javax.swing.JLabel lbl_num_venta;
+    private javax.swing.JLabel lbl_opccion;
+    private javax.swing.JPanel panel_info;
+    private javax.swing.JScrollPane scbar_inicio;
+    private javax.swing.JTable tbl_info;
+    private javax.swing.JTextField txt_num_tck;
     // End of variables declaration//GEN-END:variables
 
+  
+
+
     
-}
+}//fin clase

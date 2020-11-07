@@ -1,4 +1,6 @@
 package modelo;
+
+
 import java.util.*;
 
 /**
@@ -12,13 +14,15 @@ public class Venta {
     public Venta() {
     }
 
-    public Venta(Date fecha, String nom_Empleado, int num_vnta, String nom_tienda, String direccion, double total) {
+    public Venta(Date fecha, String nom_Empleado, int num_vnta, String nom_tienda, String direccion, double total, ArrayList<Producto> productos, Pago pago) {
         this.fecha = fecha;
         this.nom_Empleado = nom_Empleado;
         this.num_vnta = num_vnta;
         this.nom_tienda = nom_tienda;
         this.direccion = direccion;
         this.total = total;
+        this.productos = productos;
+        this.pago = pago;
     }
 
     /**
@@ -50,14 +54,42 @@ public class Venta {
      * 
      */
     private double total;
+    
+    /**
+     * 
+     */
+    private  ArrayList<Producto> productos;
+    
+    
+    /**
+     * 
+     */
+    private Pago pago;
 
 
+   
 
     /**
      * 
      */
-    public void Operation1() {
+    public void Venta() {
         // TODO implement here
+    }
+
+    /**
+     * @return
+     */
+    public boolean agregarVenta() {
+        // TODO implement here
+        return false;
+    }
+
+    /**
+     * @return
+     */
+    public boolean modificarVenta() {
+        // TODO implement here
+        return false;
     }
 
     public Date getFecha() {
@@ -108,4 +140,23 @@ public class Venta {
         this.total = total;
     }
 
+    public ArrayList<Producto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(ArrayList<Producto> productos) {
+        this.productos = productos;
+    }
+
+    public Pago getPago() {
+        return pago;
+    }
+
+    public void setPago(Pago pago) {
+        this.pago = pago;
+    }
+
+    
+    
+    
 }

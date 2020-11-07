@@ -1,4 +1,6 @@
 package modelo;
+
+
 import java.util.*;
 
 /**
@@ -6,15 +8,15 @@ import java.util.*;
  */
 public class Pago {
 
+    public Pago(String nombre, double monto) {
+        this.nombre = nombre;
+        this.monto = monto;
+    }
+
     /**
      * Default constructor
      */
     public Pago() {
-    }
-
-    public Pago(String nombre, double monto) {
-        this.nombre = nombre;
-        this.monto = monto;
     }
 
     /**
@@ -27,21 +29,14 @@ public class Pago {
      */
     private double monto;
 
-    public String getNombre() {
-        return nombre;
-    }
+    
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    /**
+     * @return
+     */
+    public String damePago() {
+        // TODO implement here
+        return "";
     }
-
-    public double getMonto() {
-        return monto;
-    }
-
-    public void setMonto(double monto) {
-        this.monto = monto;
-    }
-
 
 }
