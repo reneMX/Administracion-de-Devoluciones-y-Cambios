@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
@@ -22,6 +23,7 @@ import modelo.Venta;
 public class Conexion {
     private Connection connection = null;
     private ResultSet resultSet = null;
+    private ResultSetMetaData resultMeta = null;
     private Statement statement = null;
     private String db= "/Users/renemm/Desktop/Aseguramiento/LineClothes/DevolucionesCambios/BasesDatos/DevolucionesCambios.db";
     
@@ -35,6 +37,7 @@ public class Conexion {
          Class.forName("org.sqlite.JDBC");
          connection = DriverManager.getConnection("jdbc:sqlite:" + this.db );
          System.out.println("Conectado a la base de datos SQLite [ " + this.db + "]");
+         connection.close();
       }catch(Exception e){
          System.out.println(e);
       }
@@ -62,7 +65,6 @@ public class Conexion {
         generaSecuencia();
         
         try {
-            
             PreparedStatement st = connection.prepareStatement("insert into ventas (id_venta,fch_venta,num_venta,nombre_Empleado,nombre_tienda,direccion_tienda,total_venta) values (?,?,?,?,?,?,?)");
             st.setString(1,secuencia +  "");
             st.setString(2,venta.getFecha() + "");
@@ -82,56 +84,48 @@ public class Conexion {
     }
      
      
-     public int buscaVenta(int num_venta)
+     public boolean validaVenta(int num_venta)
      {
         int val = 0;
-        try {
-            PreparedStatement st = connection.prepareStatement("select * from ventas where num_venta="+num_venta);
-            resultSet = st.executeQuery();
-            val =resultSet.getInt(3) ;
-            
-            if ( val > 0 ) 
-            {
-                
-//               while (resultSet.next()) {
-//                System.out.print("ID: ");
-//                System.out.println(resultSet.getInt("id_venta"));
-//
-//                System.out.print("Nombre: ");
-//                System.out.println(resultSet.getString("fch_venta"));
-//
-//                System.out.print("Apellidos: ");
-//                System.out.println(resultSet.getString("num_venta"));
-//
-//                System.out.println("=======================");
-//            }
-                return val;
-            }
-             connection.close();
+        boolean bandera = false;
+        
+        try
+        {
+                PreparedStatement st = connection.prepareStatement("select * from ventas where num_venta="+num_venta);
+                resultSet = st.executeQuery();
+                val = resultSet.getInt(3) ;
+
+                if ( val > 0 ) 
+                {
+                    if(val == num_venta)
+                    {   
+//                        resultMeta =  resultSet.getMetaData();
+                        bandera =  true;
+                    }
+                }
+                connection.close();
          }catch(SQLException e){
-            System.out.println(e);
-            
-        }
-      return val;
-          
-     }
+                System.out.println(e);
+            }
+      
+         return bandera;
+     }//Fin metodo busqueda
+
+    public ResultSet getResultSet() {
+        return resultSet;
+    }
+
+    public ResultSetMetaData getResultMeta() {
+        return resultMeta;
+    }
      
      
-//     public boolean buscar(int id){
-//         boolean res = false;
-//         
-//         try {
-//                PreparedStatement pst = connection.prepareStatement("SELECT id_emp,pass,nombre,id_empleado FROM Empleado WHERE id_emp=?");
-//                pst.setString(1, "id_emp" ) ;
-//                res = true;
-//        }catch(Exception e){
-//             System.out.print(e);
-//             res = false;
-//         }
-//      return    res;
-//     }
+     
+     
     
     
+     
+     
     public void desconectar()
     {
         try {
@@ -146,3 +140,20 @@ public class Conexion {
     }
     
 }
+
+
+//                 while (resultSet.next())
+//                        {
+//                            System.out.print("ID: ");
+//                            System.out.println(resultSet.getInt("id_venta"));
+//
+//                            System.out.print("Fecha: ");
+//                            System.out.println(resultSet.getString("fch_venta"));
+//                            venta.setFecha(resultSet.getDate("fch_venta"));
+//
+//                            System.out.print("Numero de Venta: ");
+//                            System.out.println(resultSet.getString("num_venta"));
+//                            venta.setNum_vnta(resultSet.getInt("num_venta"));
+//
+//                            System.out.println("=======================");
+//                        }

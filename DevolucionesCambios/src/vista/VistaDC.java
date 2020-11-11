@@ -117,8 +117,31 @@ public class VistaDC extends javax.swing.JFrame {
             new String [] {
                 "Fecha", "Num venta", "Empleado", "Tienda", "Direccion", "Total"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane2.setViewportView(tbl_info);
+        if (tbl_info.getColumnModel().getColumnCount() > 0) {
+            tbl_info.getColumnModel().getColumn(0).setHeaderValue("Fecha");
+            tbl_info.getColumnModel().getColumn(1).setHeaderValue("Num venta");
+            tbl_info.getColumnModel().getColumn(2).setHeaderValue("Empleado");
+            tbl_info.getColumnModel().getColumn(3).setHeaderValue("Tienda");
+            tbl_info.getColumnModel().getColumn(4).setHeaderValue("Direccion");
+            tbl_info.getColumnModel().getColumn(5).setHeaderValue("Total");
+        }
 
         panel_info.setVisible(false);
 
@@ -291,6 +314,11 @@ public class VistaDC extends javax.swing.JFrame {
     public JTextField getTxt_num_tck() {
         return txt_num_tck;
     }
+    
+     public JTable getTbl_info() {
+        return tbl_info;
+    }
+
 
    
         
@@ -311,6 +339,7 @@ public class VistaDC extends javax.swing.JFrame {
     private javax.swing.JTextField txt_num_tck;
     // End of variables declaration//GEN-END:variables
 
+   
   
 
 

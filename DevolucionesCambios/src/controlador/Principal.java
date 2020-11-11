@@ -5,8 +5,8 @@
  */
 package controlador;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import modelo.Efectivo;
 import modelo.Venta;
 import vista.VistaDC;
@@ -23,15 +23,17 @@ import modelo.Producto;
         *@param args  the command
         */
         public  static void main(String[] args){
-            Date fecha = new Date();
+            LocalDateTime fecha = LocalDateTime.now();
             Efectivo pago = new Efectivo(12002,"Dinero", 926);
             Producto pantalon = new Producto("Jeans Vans",30,1200);
             ArrayList<Producto> productos = new ArrayList<Producto>();
             productos.add(pantalon);
             Venta venta = new Venta(fecha,"Rene",9029,"Sucursal Las Antenas","Iztapalapa,18,29",1829,productos,pago);
             VistaDC vista =  new VistaDC();
-
+            
+            
             Controlador controlador = new Controlador(vista,venta);
+            
             controlador.iniciar();
             vista.setVisible(true);
             

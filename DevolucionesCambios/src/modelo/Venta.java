@@ -1,6 +1,7 @@
 package modelo;
 
 
+import java.time.LocalDateTime;
 import java.util.*;
 
 /**
@@ -14,7 +15,7 @@ public class Venta {
     public Venta() {
     }
 
-    public Venta(Date fecha, String nom_Empleado, int num_vnta, String nom_tienda, String direccion, double total, ArrayList<Producto> productos, Pago pago) {
+    public Venta(LocalDateTime fecha, String nom_Empleado, int num_vnta, String nom_tienda, String direccion, double total, ArrayList<Producto> productos, Pago pago) {
         this.fecha = fecha;
         this.nom_Empleado = nom_Empleado;
         this.num_vnta = num_vnta;
@@ -28,7 +29,7 @@ public class Venta {
     /**
      * 
      */
-    private Date fecha;
+    private LocalDateTime fecha;
 
     /**
      * 
@@ -92,11 +93,11 @@ public class Venta {
         return false;
     }
 
-    public Date getFecha() {
+    public LocalDateTime getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(LocalDateTime fecha) {
         this.fecha = fecha;
     }
 

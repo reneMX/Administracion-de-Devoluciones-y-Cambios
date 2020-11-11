@@ -8,6 +8,11 @@ package controlador;
 import BDD.Conexion;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
+import java.sql.Time;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
 import modelo.Venta;
 import vista.VistaDC;
 
@@ -65,31 +70,78 @@ public class Controlador implements ActionListener{
     
     //ACCION PARA LA ENTRADA TXT DE VENTA
     @Override
-    public void actionPerformed(java.awt.event.ActionEvent e) {
+    public void actionPerformed(java.awt.event.ActionEvent e)
+    {
 
        Object c = e.getSource();
-       if(c.equals(ventana_p.getBtn_validar()))//hacemos la validacion
-       {
-           //conexion.guardarVenta(venta);
-           //Hacemos la busqueda
-           //Le pasamos el numero del TXT que esta en la interfaz
-           //El valor se pasa al metodo 'buscaVenta()' de la clase 'Conexion'
-           int busqueda = conexion.buscaVenta(Integer.parseInt(ventana_p.getTxt_num_tck().getText()));
-           if( busqueda > 0)//el num_venta es valido
-           {
-                ventana_p.getLbl_num_venta().setText("Ticket Valido");
-                ventana_p.getPanel_info().setVisible(true);
-                //System.out.println(ventana_p.getTxt_num_tck().getText());
-                ventana_p.getLbl_opccion().setVisible(true);
-                ventana_p.getBtn_cambios().setVisible(true);
-                ventana_p.getBtn_devoluciones().setVisible(true);
-           }
-           else
-           {
-               ventana_p.getLbl_num_venta().setText("El numero de venta no existe");
-               //El num_venta no esta en la base de datos
-           }
-       }
+       
+           
+
+       try{
+           
+                if(c.equals(ventana_p.getBtn_validar()))//hacemos la validacion
+                {  
+//                    conexion.guardarVenta(venta);
+
+                    if( conexion.validaVenta(Integer.parseInt(ventana_p.getTxt_num_tck().getText())))//el num_venta es valido
+                    {
+
+//                        DefaultTableModel modelo = new DefaultTableModel();
+                         //Informamos de la valides de la venta
+                         ventana_p.getLbl_num_venta().setText("Ticket Valido");
+                         ventana_p.getPanel_info().setVisible(true);
+
+         //                try{
+         //                    int num_columnas =  conexion.getResultMeta().getColumnCount();
+         //                    ventana_p.getTbl_info().setModel(modelo);
+         //                    ventana_p.getTbl_info().enable(false); ;
+         //                    
+         //                    
+         //                        modelo.addColumn("Fecha");
+         //                        modelo.addColumn("Tiempo Expirado");
+         //                        modelo.addColumn("Numero de Venta ");
+         //                        modelo.addColumn("Empleado");  
+         //                        modelo.addColumn("Tienda");
+         //                        modelo.addColumn("Direccion");
+         //                        modelo.addColumn("Total");
+         //                    
+         //                        while(conexion.getResultSet().next())
+         //                        {
+         //                            Object [] filas = new Object[num_columnas];
+         //                            String fchVenta = conexion.getResultSet().getString("fch_venta");
+         //                            
+         //                            filas[0] = conexion.getResultSet().getObject("fch_venta");
+         //                            filas[1] = dameExpiracion(fchVenta);
+         //                            filas[2] = conexion.getResultSet().getObject("num_venta");
+         //                            filas[3] = conexion.getResultSet().getObject("nombre_empleado");
+         //                            filas[4] = conexion.getResultSet().getObject("nombre_tienda");
+         //                            filas[5] = conexion.getResultSet().getObject("direccion_tienda");
+         //                            filas[6] = conexion.getResultSet().getObject("total_venta");
+         //                            modelo.addRow(filas);
+         //                        }
+         //                }catch(SQLException ex){
+         //                       System.out.println(e);
+         //            }
+
+                         ventana_p.getLbl_opccion().setVisible(true);
+                         ventana_p.getBtn_cambios().setVisible(true);
+                         ventana_p.getBtn_devoluciones().setVisible(true);
+                    }//valida venta
+                    else
+                    {
+                        ventana_p.getLbl_num_venta().setText("El numero de venta no existe");
+                        //El num_venta no esta en la base de datos
+                    }
+                }//fin if valida boton
+           conexion.desconectar();
+       }catch(NullPointerException ex){
+           System.out.println(ex);
+           
+       }//fin cacth NULL
+       
+       
+       
+       
 //        if( c.equals(ventana_p.getBtn_cambios()) || c.equals(ventana_p.getBtn_devoluciones())  ) 
 //        {
 //            System.out.println("Hola mundo");
@@ -102,6 +154,34 @@ public class Controlador implements ActionListener{
 //        }       
     }
     
+}  
+//    private int dameExpiracion(String fch_venta )
+//    {
+//        int j = 0;
+//        LocalDateTime fchActual = LocalDateTime.now();
+//        
+//        
+//        
+//        //Dividimos la cadena para obtener el dia
+//        // Formato de la Fecha: [Dia Mes dia Hora:Minutos:Segundos CST Año] 
+//        String [] campos = fch_venta.split("\\s+");
+//        while(j<campos.length)
+//        {
+//            j++;
+//            
+//        }
+////        fchVenta = new Date();
+////        fchVenta.se
+////        System.out.println(campos[0]);
+////        System.out.println(campos[1]);
+////        System.out.println(campos[2]);
+////         fchVenta =  new Date(campos[]);
+//        
+//        
+//        
+////        int aux = fchActual.getDay();
+//    return  Integer.parseInt(campos[2]);
+//    }
     
   
-}
+
