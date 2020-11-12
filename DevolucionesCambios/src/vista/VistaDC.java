@@ -236,6 +236,7 @@ public class VistaDC extends javax.swing.JFrame {
         
     }//GEN-LAST:event_txt_num_tckActionPerformed
 
+
     private void txt_num_tckKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_num_tckKeyTyped
 //        // TODO add your handling code here:
 //         Object c = evt.getSource();
@@ -320,7 +321,17 @@ public class VistaDC extends javax.swing.JFrame {
     }
 
 
-   
+       public boolean validaID()
+    {        
+                //Guardamos el id en una variable local, para validar que lo ingresado es numero
+                String entrada = txt_num_tck.getText();
+                
+                if (entrada.matches("[0-9]*") && entrada.length() <= 5)
+                  return true;
+                else
+                  return false;
+    }//fin metodo validaID   
+
         
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

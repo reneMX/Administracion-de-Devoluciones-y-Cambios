@@ -25,61 +25,59 @@ public class Conexion {
     private ResultSet resultSet = null;
     private ResultSetMetaData resultMeta = null;
     private Statement statement = null;
-    private String db= "/Users/renemm/Desktop/Aseguramiento/LineClothes/DevolucionesCambios/BasesDatos/DevolucionesCambios.db";
+    private String db = "/Users/renemm/Desktop/Aseguramiento/LineClothes/DevolucionesCambios/DevolucionesCambios/src/BDD/DevolucionesCambios.db";
     
     private int secuencia;
     
     
+    
+    
+    /**
 
+     * @deprecated
+     * Constructor para instanciar una conexion a SQLite
+
+     */
      public Conexion()
     {
       try{
          Class.forName("org.sqlite.JDBC");
          connection = DriverManager.getConnection("jdbc:sqlite:" + this.db );
          System.out.println("Conectado a la base de datos SQLite [ " + this.db + "]");
-         connection.close();
+         
       }catch(Exception e){
          System.out.println(e);
       }
       secuencia = 0;
       
     }
-     
-     public void  generaSecuencia()
-     {
-        try {
-            PreparedStatement st = connection.prepareStatement("select * from ventas order by id_venta desc limit 1");
-            resultSet = st.executeQuery();
-            secuencia = 1 + resultSet.getInt("id_venta");
-            connection.close();
-        } catch (SQLException ex){
-            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-     }
+   
      
      public boolean guardarVenta(Venta venta)
     {
         boolean res = false;
-        //generamos una secuencia para la PK.
-        generaSecuencia();
-        
+       
         try {
-            PreparedStatement st = connection.prepareStatement("insert into ventas (id_venta,fch_venta,num_venta,nombre_Empleado,nombre_tienda,direccion_tienda,total_venta) values (?,?,?,?,?,?,?)");
-            st.setString(1,secuencia +  "");
-            st.setString(2,venta.getFecha() + "");
-            st.setString(3,venta.getNum_vnta()+"");
-            st.setString(4,venta.getNom_Empleado());
-            st.setString(5,venta.getNom_tienda());
-            st.setString(6,venta.getDireccion());
-            st.setString(7,venta.getTotal()+"");
-            st.execute();
+            PreparedStatement ps = connection.prepareStatement("insert into ventas (fch_venta,num_venta,nombre_Empleado,nombre_tienda,direccion_tienda,total_venta) values (?,?,?,?,?,?)");
+                        
+            
+//            ps.setString(1,secuencia +  "");
+            ps.setString(1,venta.getFecha() + "");
+            ps.setString(2,venta.getNum_vnta()+"");
+            ps.setString(3,venta.getNom_Empleado());
+            ps.setString(4,venta.getNom_tienda());
+            ps.setString(5,venta.getDireccion());
+            ps.setString(6,venta.getTotal()+"");
+            ps.executeUpdate();
             
             res = true;
-            connection.close();
+            
          }catch(SQLException e){
             System.out.println(e);
-        }
+        }catch(NullPointerException nu){
+                System.out.println(nu);
+            }
+        
       return res;
     }
      
@@ -89,23 +87,27 @@ public class Conexion {
         int val = 0;
         boolean bandera = false;
         
+        
         try
         {
-                PreparedStatement st = connection.prepareStatement("select * from ventas where num_venta="+num_venta);
-                resultSet = st.executeQuery();
+
+                PreparedStatement ps = connection.prepareStatement("select * from ventas where num_venta="+num_venta);
+                resultSet = ps.executeQuery();
                 val = resultSet.getInt(3) ;
 
                 if ( val > 0 ) 
                 {
                     if(val == num_venta)
                     {   
-//                        resultMeta =  resultSet.getMetaData();
+                        resultMeta =  resultSet.getMetaData();
                         bandera =  true;
                     }
                 }
-                connection.close();
-         }catch(SQLException e){
+                
+         }catch(SQLException e  ){
                 System.out.println(e);
+            }catch(NullPointerException nu){
+                System.out.println(nu);
             }
       
          return bandera;
@@ -136,6 +138,8 @@ public class Conexion {
         }
         catch (SQLException ex) {
             System.out.println(ex);
+        }catch(NullPointerException e){
+            System.out.println(e);
         }
     }
     

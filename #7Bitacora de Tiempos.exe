@@ -1,0 +1,129 @@
+<html><head><title>Bitácora de TiempoPara Rene Martinez M.Para /Proyecto/PSP1</title><NOTLINK REL='stylesheet' TYPE='text/css' HREF='/style.css'>
+<notlink rel="stylesheet" type="text/css" href="/reports/timeReports.css"></head>
+<body><h1>Bitácora de TiempoPara /Proyecto/PSP1</h1>
+<!-- cutStart --><p><table border class='timeLog'><tr>
+<th>Proyecto/Tarea</th>
+<th>Fase</th>
+<th>Tiempo Inicio</th>
+<th>Delta</th>
+<th>Interrupción</th>
+
+<th>Comentario</th>
+
+</tr>
+<TR>
+<TD>/Proyecto/PSP1</TD>
+<TD>Planning</TD>
+<TD>nov. 09, 2020 11:22:36 a. m.</TD>
+<TD>82</TD>
+<TD>0</TD>
+<TD>Se realizo el Documento de requerimeintos, asi como el analisis conceptual</TD>
+</TR>
+<TR>
+<TD>/Proyecto/PSP1</TD>
+<TD>Planning</TD>
+<TD>nov. 09, 2020 01:20:41 p. m.</TD>
+<TD>23</TD>
+<TD>0</TD>
+<TD>Se realizo la descripccion del problema</TD>
+</TR>
+<TR>
+<TD>/Proyecto/PSP1</TD>
+<TD>Design</TD>
+<TD>nov. 09, 2020 03:54:38 p. m.</TD>
+<TD>27</TD>
+<TD>0</TD>
+<TD>Se realizo el modelo conceptual de clases</TD>
+</TR>
+<TR>
+<TD>/Proyecto/PSP1</TD>
+<TD>Code</TD>
+<TD>nov. 09, 2020 05:24:51 p. m.</TD>
+<TD>20</TD>
+<TD>0</TD>
+<TD>Se realizo la interfaz, principal , clases modelo, BDD.</TD>
+</TR>
+<TR>
+<TD>/Proyecto/PSP1</TD>
+<TD>Code</TD>
+<TD>nov. 09, 2020 07:26:06 p. m.</TD>
+<TD>22</TD>
+<TD>0</TD>
+<TD>Se realizo la base de datos y se conecto con el programa</TD>
+</TR>
+<TR>
+<TD>/Proyecto/PSP1</TD>
+<TD>Code</TD>
+<TD>nov. 09, 2020 08:33:22 p. m.</TD>
+<TD>18</TD>
+<TD>0</TD>
+<TD>Se realizo la busqueda del numero de venta en la base de datos</TD>
+</TR>
+<TR>
+<TD>/Proyecto/PSP1</TD>
+<TD>Code</TD>
+<TD>nov. 09, 2020 09:52:29 p. m.</TD>
+<TD>1</TD>
+<TD>0</TD>
+<TD>Se Generó JTable para colocar la informacion de la venta</TD>
+</TR>
+<TR>
+<TD>/Proyecto/PSP1</TD>
+<TD>Compile</TD>
+<TD>nov. 09, 2020 09:53:41 p. m.</TD>
+<TD>7</TD>
+<TD>0</TD>
+<TD>Se ejecuto y corrio el programa</TD>
+</TR>
+<TR>
+<TD>/Proyecto/PSP1</TD>
+<TD>Code</TD>
+<TD>nov. 09, 2020 11:47:47 p. m.</TD>
+<TD>5</TD>
+<TD>0</TD>
+<TD>Se Reajustaron posiciones visuales en la vistaDC</TD>
+</TR>
+<TR>
+<TD>/Proyecto/PSP1</TD>
+<TD>Code</TD>
+<TD>nov. 09, 2020 11:58:20 p. m.</TD>
+<TD>5</TD>
+<TD>0</TD>
+<TD>Se agregaron los cambios a la rama PSP1 de git local y remoto</TD>
+</TR>
+<TR>
+<TD>/Proyecto/PSP1</TD>
+<TD>Code</TD>
+<TD>nov. 11, 2020 08:31:59 a. m.</TD>
+<TD>16</TD>
+<TD>0</TD>
+<TD>Se Obtuvieron los datos de la venta</TD>
+</TR>
+<TR>
+<TD>/Proyecto/PSP1</TD>
+<TD>Compile</TD>
+<TD>nov. 11, 2020 11:15:59 a. m.</TD>
+<TD>2</TD>
+<TD>0</TD>
+<TD>Se ejecuto el programa con consulta de venta</TD>
+</TR>
+<TR>
+<TD>/Proyecto/PSP1</TD>
+<TD>Test</TD>
+<TD>nov. 11, 2020 05:46:34 p. m.</TD>
+<TD>40</TD>
+<TD>0</TD>
+<TD>Se probaron los datos , de la base de datos y la interfaz donde se muestran</TD>
+</TR>
+<TR>
+<TD>/Proyecto/PSP1</TD>
+<TD>Design</TD>
+<TD>nov. 11, 2020 09:12:42 p. m.</TD>
+<TD>68</TD>
+<TD>0</TD>
+<TD>Se modifico el diseño conceptual</TD>
+</TR>
+</TABLE>
+<!-- cutEnd -->
+</BODY></HTML>
+

@@ -1,0 +1,44 @@
+<HTML><HEAD><TITLE>Bitácora de DefectosPara Rene Martinez M.Para /Proyecto/PSP1</TITLE>
+<notlink rel="stylesheet" type="text/css" href="/style.css"><notlink rel="stylesheet" type="text/css" href="/reports/defectReports.css"></HEAD>
+<BODY><H1>Bitácora de DefectosPara /Proyecto/PSP1</H1><!-- cutStart -->
+<p><table border class='defectLog'><tr>
+<th>Proyecto/Tarea</th>
+<th>Fecha</th>
+<th>ID</th>
+<th>Tipo</th>
+<th>Inyectado</th>
+<th>Eliminado</th>
+<th>Tiempo de Arreglo</th>
+<th>Cuenta de correcciones</th>
+<th>Defecto por Arreglo</th>
+<th>Pendiente</th>
+<th>Descripción</th></tr><TR>
+<TD>/Proyecto/PSP1</TD>
+<TD>11/11/2020</TD>
+<TD>1</TD>
+<TD>Data</TD>
+<TD>Code</TD>
+<TD>Test</TD>
+<TD ALIGN='center'>30</TD>
+<TD ALIGN='center'>3</TD>
+<TD ALIGN='center'></TD>
+<TD ALIGN='center'></TD>
+<TD>Estaba&nbsp;&nbsp;haciendo 2 metodos. Uno para hacer la busqueda en la base de datos y el otro método para el objeto de resultados de la consulta. Así que ,&nbsp;&nbsp;cree el método para validar la búsqueda y los resultados(ResultSet) los guarde en el atributo de la clase Conexion, y al momento de consultarlos, lo hacía por medio de un metodo get, para aplicar encapsulamiento. </TD>
+</TR>
+<TR>
+<TD>/Proyecto/PSP1</TD>
+<TD>11/11/2020</TD>
+<TD>2</TD>
+<TD>Checking</TD>
+<TD>Compile</TD>
+<TD>Test</TD>
+<TD ALIGN='center'>40</TD>
+<TD ALIGN='center'>2</TD>
+<TD ALIGN='center'>2</TD>
+<TD ALIGN='center'></TD>
+<TD>Se genero un arrastre de valor nulo y salida de array(ArrayIndexOutOfBoundsException y NullPointerException)<br>El problema es que no se había generado el cachado de las excepciones, adecuadamente.<br>La soluciones, probar solo la parte del código, que el error de compilación mandaba, asi como la linea desde donde sucedían los errores.</TD>
+</TR>
+</table></p>
+<!-- cutEnd -->
+</BODY></HTML>
+
