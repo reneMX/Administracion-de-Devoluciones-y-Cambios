@@ -3,13 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/renemm/Desktop/Aseguramiento/LineClothes/DevolucionesCambios/DevolucionesCambios/src/modelo/Pago.java</file>
-            <file>file:/Users/renemm/Desktop/Aseguramiento/LineClothes/DevolucionesCambios/DevolucionesCambios/src/modelo/Producto.java</file>
             <file>file:/Users/renemm/Desktop/Aseguramiento/LineClothes/DevolucionesCambios/DevolucionesCambios/src/controlador/Controlador.java</file>
-            <file>file:/Users/renemm/Desktop/Aseguramiento/LineClothes/DevolucionesCambios/DevolucionesCambios/src/modelo/Venta.java</file>
-            <file>file:/Users/renemm/Desktop/Aseguramiento/LineClothes/DevolucionesCambios/DevolucionesCambios/src/modelo/Efectivo.java</file>
-            <file>file:/Users/renemm/Desktop/Aseguramiento/LineClothes/DevolucionesCambios/DevolucionesCambios/src/BDD/Conexion.java</file>
             <file>file:/Users/renemm/Desktop/Aseguramiento/LineClothes/DevolucionesCambios/DevolucionesCambios/src/controlador/Principal.java</file>
+            <file>file:/Users/renemm/Desktop/Aseguramiento/LineClothes/DevolucionesCambios/DevolucionesCambios/src/BDD/Conexion.java</file>
             <file>file:/Users/renemm/Desktop/Aseguramiento/LineClothes/DevolucionesCambios/DevolucionesCambios/src/vista/VistaDC.java</file>
         </group>
     </open-files>

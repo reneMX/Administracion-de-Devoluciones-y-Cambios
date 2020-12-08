@@ -32,11 +32,7 @@ public class VistaDC extends javax.swing.JFrame {
         initComponents();
         contenPane.setPreferredSize(new Dimension(400,400));
         //scbar_inicio.addAdjustmentListener((AdjustmentListener) this);
-        
-        
-        
-         
-        
+
     }
     
 
