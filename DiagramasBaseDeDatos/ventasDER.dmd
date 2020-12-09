@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="ventasDER" id="DAC560DE-6603-BB69-D7F3-127AFD361B25" version="3.5">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-09 03:10:07 UTC</createdTime>
+<ownerDesignName>ventasDER</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>DAC560DE-6603-BB69-D7F3-127AFD361B25</designId>
+</OSDM_Design>
