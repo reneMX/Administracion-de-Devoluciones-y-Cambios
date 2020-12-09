@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="65869182-AF45-BA0D-8BE9-36EAF149BB00" name="Pago">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-09 03:19:47 UTC</createdTime>
+<ownerDesignName>ventasDER</ownerDesignName>
+<engineerTo>
+<item key="97FE13FF-E19C-48AC-E369-7A3A7B2D29FA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_pago" id="8BE2131C-8A68-C87D-CAE6-8F6FECA568B7">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-09 03:19:59 UTC</createdTime>
+<ownerDesignName>ventasDER</ownerDesignName>
+<engineerTo>
+<item key="97FE13FF-E19C-48AC-E369-7A3A7B2D29FA" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="5891F98D-A471-CB8C-4EBB-29011A3798E0">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-09 03:20:06 UTC</createdTime>
+<ownerDesignName>ventasDER</ownerDesignName>
+<engineerTo>
+<item key="97FE13FF-E19C-48AC-E369-7A3A7B2D29FA" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="monto" id="E8547B5A-475F-B782-C753-F9C947910BC1">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-09 03:20:13 UTC</createdTime>
+<ownerDesignName>ventasDER</ownerDesignName>
+<engineerTo>
+<item key="97FE13FF-E19C-48AC-E369-7A3A7B2D29FA" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F9D56964-282F-8A68-3A5A-D6FD2DD63391" name="Pago PK">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-09 03:20:05 UTC</createdTime>
+<ownerDesignName>ventasDER</ownerDesignName>
+<engineerTo>
+<item key="97FE13FF-E19C-48AC-E369-7A3A7B2D29FA" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8BE2131C-8A68-C87D-CAE6-8F6FECA568B7</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

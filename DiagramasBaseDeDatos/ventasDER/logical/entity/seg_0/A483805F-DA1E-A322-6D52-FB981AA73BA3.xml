@@ -1,0 +1,128 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A483805F-DA1E-A322-6D52-FB981AA73BA3" name="Venta">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-09 03:21:28 UTC</createdTime>
+<ownerDesignName>ventasDER</ownerDesignName>
+<engineerTo>
+<item key="97FE13FF-E19C-48AC-E369-7A3A7B2D29FA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_venta" id="7346E0E7-CB28-12F3-F12C-5A6993F6EF22">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-09 03:21:39 UTC</createdTime>
+<ownerDesignName>ventasDER</ownerDesignName>
+<engineerTo>
+<item key="97FE13FF-E19C-48AC-E369-7A3A7B2D29FA" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_producto" id="D6B71639-1D46-205C-A626-ABC4D06FC940">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-09 03:23:09 UTC</createdTime>
+<generatorID>C7E8DDC4-5D35-C707-AA08-29435AEA8138</generatorID>
+<ownerDesignName>ventasDER</ownerDesignName>
+<engineerTo>
+<item key="97FE13FF-E19C-48AC-E369-7A3A7B2D29FA" value="true"/>
+</engineerTo>
+<referedAttribute>562D2437-E268-F752-91AC-378B6E98A070</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_pago" id="2AD6A074-6775-33FC-81B4-437C6DBAE741">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-09 03:22:55 UTC</createdTime>
+<generatorID>F22D47C7-3B33-76F9-F4F8-C67326C88DFC</generatorID>
+<ownerDesignName>ventasDER</ownerDesignName>
+<engineerTo>
+<item key="97FE13FF-E19C-48AC-E369-7A3A7B2D29FA" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>8BE2131C-8A68-C87D-CAE6-8F6FECA568B7</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="num_venta" id="AA7B7B22-4C86-F5D1-AA50-8CC14825A883">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-09 03:23:30 UTC</createdTime>
+<ownerDesignName>ventasDER</ownerDesignName>
+<engineerTo>
+<item key="97FE13FF-E19C-48AC-E369-7A3A7B2D29FA" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fch_venta" id="42CB0741-F121-4C7E-6318-64AA83AF3DA3">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-09 03:23:39 UTC</createdTime>
+<ownerDesignName>ventasDER</ownerDesignName>
+<engineerTo>
+<item key="97FE13FF-E19C-48AC-E369-7A3A7B2D29FA" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre_empleado" id="9837FA90-C91A-C744-EC06-FEC446F1A5CF">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-09 03:23:46 UTC</createdTime>
+<ownerDesignName>ventasDER</ownerDesignName>
+<engineerTo>
+<item key="97FE13FF-E19C-48AC-E369-7A3A7B2D29FA" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre_tienda" id="F3971C58-E78C-E541-145C-0FDA182AFA88">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-09 03:23:54 UTC</createdTime>
+<ownerDesignName>ventasDER</ownerDesignName>
+<engineerTo>
+<item key="97FE13FF-E19C-48AC-E369-7A3A7B2D29FA" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="direccion_tienda" id="07A9FC7A-4EAA-4CA5-AA65-40BF975C4937">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-09 03:24:06 UTC</createdTime>
+<ownerDesignName>ventasDER</ownerDesignName>
+<engineerTo>
+<item key="97FE13FF-E19C-48AC-E369-7A3A7B2D29FA" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="total_venta" id="A59D923B-4B54-E5D3-2E78-2D6E91657A2B">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-09 03:24:21 UTC</createdTime>
+<ownerDesignName>ventasDER</ownerDesignName>
+<engineerTo>
+<item key="97FE13FF-E19C-48AC-E369-7A3A7B2D29FA" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="148057D7-447A-6965-A038-BB608750D34E" name="Venta PK">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-09 03:21:49 UTC</createdTime>
+<ownerDesignName>ventasDER</ownerDesignName>
+<engineerTo>
+<item key="97FE13FF-E19C-48AC-E369-7A3A7B2D29FA" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7346E0E7-CB28-12F3-F12C-5A6993F6EF22</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

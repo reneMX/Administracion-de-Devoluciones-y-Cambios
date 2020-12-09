@@ -15,6 +15,7 @@ import modelo.Efectivo;
 import modelo.Venta;
 import vista.VistaDC;
 import modelo.Producto;
+import vista.Devoluciones;
 
 /**
  *
@@ -33,9 +34,11 @@ import modelo.Producto;
             ArrayList<Producto> productos = new ArrayList<Producto>();
             productos.add(pantalon);
             Venta venta = new Venta(fecha,"Rene",9029,"Sucursal Las Antenas","Iztapalapa,18,29",1829,productos,pago);
+
             VistaDC vista =  new VistaDC();
+            Devoluciones dev = new Devoluciones();
             
-           // Conexion conexion = new Conexion();
+//            Conexion conexion = new Conexion();
             //conexion.guardarVenta(venta);
             
 //            try {
@@ -47,13 +50,14 @@ import modelo.Producto;
 //                Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
 //            }
             
-//            
-//            
-            Controlador controlador = new Controlador(vista,venta);
+      //      dev.setVisible(true);
+      
+
+            Controlador controlador = new Controlador(vista, venta, dev);
             
             controlador.iniciar();
             vista.setVisible(true);
-////            
+
             
         }
     }

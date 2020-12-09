@@ -27,10 +27,11 @@ public class Conexion {
     private ResultSet resultSet;
     private ResultSetMetaData resultMeta;
     private Statement statement;
-    PreparedStatement prepared;
+    private PreparedStatement prepared;
     String sql;
 //    private String db= "/Users/renemm/Desktop/Aseguramiento/LineClothes/DevolucionesCambios/BasesDatos/DevolucionesCambios.db";
-    private String db = "/Users/renemm/Desktop/ventas.db";
+    //private String db = "/Users/renemm/Desktop/ventas.db";
+    private String db = "src/BDD/ventas.db";
     
     
     private int secuencia;
@@ -69,6 +70,12 @@ public class Conexion {
        return sec;
      }//fin generaSecuencia()
      
+     
+     
+         
+     
+             
+             
      public boolean guardarVenta(Venta venta)
     {
         boolean res = false;
@@ -128,16 +135,17 @@ public class Conexion {
      }//Fin metodo busqueda
 
      
-     public void getVenta(int num_venta) throws SQLException
+     public void getVenta(int num_venta)
      {
-
+        System.out.println("Si entra a getVenta"); 
         try{
-            sql = "select * from ventas where num_venta = " + num_venta ;
+            sql       = "select * from ventas where num_venta = " + num_venta ;
             prepared  = connection.prepareStatement(sql);
             resultSet = prepared.executeQuery(); 
         }catch(SQLException e){
                             System.out.println(e);
                         }//fin catch
+        
      }//fin getVenta();
      
     public ResultSet getResultSet() {
@@ -168,6 +176,16 @@ public class Conexion {
             System.out.println(ex);
         }
     }//fin desconectar()
+
+    public Statement getStatement() {
+        return statement;
+    }
+
+    public PreparedStatement getPrepared() {
+        return prepared;
+    }
+    
+    
     
 }
 
