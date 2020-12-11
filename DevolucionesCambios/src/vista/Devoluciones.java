@@ -22,7 +22,7 @@ public class Devoluciones extends javax.swing.JFrame {
         
         initComponents();
         
-          
+          txt_num_venta.setText(t);
     }
 
     /**

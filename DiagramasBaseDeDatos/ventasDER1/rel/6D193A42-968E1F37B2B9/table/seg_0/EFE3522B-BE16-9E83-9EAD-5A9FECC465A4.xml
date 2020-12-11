@@ -1,0 +1,159 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EFE3522B-BE16-9E83-9EAD-5A9FECC465A4" name="Venta">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-10 18:06:41 UTC</createdTime>
+<generatorID>A483805F-DA1E-A322-6D52-FB981AA73BA3</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_venta" id="783CDD5A-1245-ED70-C551-5AB156B57EAC">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-10 18:06:41 UTC</createdTime>
+<generatorID>7346E0E7-CB28-12F3-F12C-5A6993F6EF22</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Pago_id_pago" id="2060C28E-C67B-54F9-C5E5-29F68E18BD6F">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-10 18:06:41 UTC</createdTime>
+<generatorID>2AD6A074-6775-33FC-81B4-437C6DBAE741</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E7CB4C27-AAD0-15AA-7BEB-E3531C9CC3EA" referredColumn="39CA47F7-A60F-6910-5FF9-04D7DA5563BD"/>
+</associations>
+</Column>
+<Column name="id_producto" id="891A5ED3-4B4F-6B01-D354-48887AA4A142">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-10 18:06:41 UTC</createdTime>
+<generatorID>9938E6BC-C214-AB68-104F-29BD306D6077</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6679DA39-85A6-FDA8-018A-B64ACC61A0AC" referredColumn="C8FF5C4B-6151-46A0-135C-9D9F205D2635"/>
+</associations>
+</Column>
+<Column name="num_venta" id="66B36FC9-B28E-0E33-AB1D-7961905CEE4C">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-10 18:06:41 UTC</createdTime>
+<generatorID>AA7B7B22-4C86-F5D1-AA50-8CC14825A883</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fch_venta" id="42A214D4-E50E-D5B6-4F55-0A881D948771">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-10 18:06:41 UTC</createdTime>
+<generatorID>42CB0741-F121-4C7E-6318-64AA83AF3DA3</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre_empleado" id="656D82AF-922F-1BDF-CDF3-0903BD517F4D">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-10 18:06:41 UTC</createdTime>
+<generatorID>9837FA90-C91A-C744-EC06-FEC446F1A5CF</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre_tienda" id="3652AEF9-AB7D-F73D-33A6-22BE393D69E3">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-10 18:06:41 UTC</createdTime>
+<generatorID>F3971C58-E78C-E541-145C-0FDA182AFA88</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="direccion_tienda" id="084B3AB6-48EE-1009-EA82-755AA2BD17B7">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-10 18:06:41 UTC</createdTime>
+<generatorID>07A9FC7A-4EAA-4CA5-AA65-40BF975C4937</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="total_venta" id="077971D2-687D-7079-FED6-21A2E01F1980">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-10 18:06:41 UTC</createdTime>
+<generatorID>A59D923B-4B54-E5D3-2E78-2D6E91657A2B</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EAA3417B-A9D9-C103-58D4-98441C054BF7" name="Venta_PK">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-10 18:06:41 UTC</createdTime>
+<generatorID>148057D7-447A-6965-A038-BB608750D34E</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="783CDD5A-1245-ED70-C551-5AB156B57EAC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="91BEBA5F-C79B-9871-8D8C-6BF7B2FDF2EC" name="Venta_Producto_FK">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-10 18:06:41 UTC</createdTime>
+<generatorID>CBC753A7-2AE7-C19D-AAEC-FB537AFFB0B9</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="891A5ED3-4B4F-6B01-D354-48887AA4A142"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9E2706D4-11F6-8E96-BC61-260BC47DC1FC" name="Venta_Pago_FK">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-10 18:06:41 UTC</createdTime>
+<generatorID>F22D47C7-3B33-76F9-F4F8-C67326C88DFC</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2060C28E-C67B-54F9-C5E5-29F68E18BD6F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

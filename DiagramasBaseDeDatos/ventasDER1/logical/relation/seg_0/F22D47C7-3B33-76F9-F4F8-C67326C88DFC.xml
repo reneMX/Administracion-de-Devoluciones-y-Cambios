@@ -2,7 +2,7 @@
 <Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="venta-pago" directorySegmentName="seg_0" id="F22D47C7-3B33-76F9-F4F8-C67326C88DFC">
 <createdBy>renemm</createdBy>
 <createdTime>2020-12-09 03:22:32 UTC</createdTime>
-<ownerDesignName>ventasDER</ownerDesignName>
+<ownerDesignName>ventasDER1</ownerDesignName>
 <engineerTo>
 <item key="6D193A42-6FE7-B6BA-A7C1-968E1F37B2B9" value="true"/>
 </engineerTo>

@@ -47,6 +47,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
+											"left": 16,
+											"top": 96,
 											"height": 13
 										},
 										{
@@ -56,8 +58,8 @@
 												"$ref": "AAAAAAF1gJ2i/5DWw5Q="
 											},
 											"font": "Arial;13;1",
-											"left": 189,
-											"top": 103,
+											"left": 197,
+											"top": 151,
 											"width": 839,
 											"height": 13,
 											"text": "Administracion de Devoluciones y cambios"
@@ -70,6 +72,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
+											"left": 16,
+											"top": 96,
 											"width": 197.9580078125,
 											"height": 13,
 											"text": "(from Diagrama de Casos de Uso)"
@@ -82,13 +86,15 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
+											"left": 16,
+											"top": 96,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 184,
-									"top": 96,
+									"left": 192,
+									"top": 144,
 									"width": 849,
 									"height": 25,
 									"stereotypeLabel": {
@@ -106,8 +112,8 @@
 								}
 							],
 							"font": "Arial;13;0",
-							"left": 184,
-							"top": 96,
+							"left": 192,
+							"top": 144,
 							"width": 849,
 							"height": 609,
 							"nameCompartment": {
@@ -370,7 +376,7 @@
 									"font": "Arial;13;0",
 									"left": 229,
 									"top": 372.5,
-									"width": 139,
+									"width": 139.30810546875,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF1gJ92QJEaHcM="
@@ -569,7 +575,7 @@
 									"font": "Arial;13;0",
 									"left": 818,
 									"top": 284.5,
-									"width": 125,
+									"width": 125.5908203125,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF1gJ+g8JFIOs4="
@@ -768,7 +774,7 @@
 									"font": "Arial;13;0",
 									"left": 588,
 									"top": 420.5,
-									"width": 212,
+									"width": 212.2744140625,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF1gKDFRJF+hSQ="
@@ -967,7 +973,7 @@
 									"font": "Arial;13;0",
 									"left": 589.5,
 									"top": 148.5,
-									"width": 178,
+									"width": 179.06982421875,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF1gKFAP5IEHCc="
@@ -1356,7 +1362,7 @@
 									"font": "Arial;13;0",
 									"left": 412,
 									"top": 292.5,
-									"width": 132,
+									"width": 133.5380859375,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF1gMzdBpMMXTk="
@@ -1650,7 +1656,7 @@
 									"font": "Arial;13;0",
 									"left": 390,
 									"top": 508.5,
-									"width": 259,
+									"width": 259.92626953125,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF1gM7TkJNtPdU="

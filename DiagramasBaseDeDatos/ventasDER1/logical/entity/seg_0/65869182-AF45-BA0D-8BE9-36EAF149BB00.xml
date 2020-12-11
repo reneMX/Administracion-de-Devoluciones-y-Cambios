@@ -2,7 +2,7 @@
 <Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="65869182-AF45-BA0D-8BE9-36EAF149BB00" name="Pago">
 <createdBy>renemm</createdBy>
 <createdTime>2020-12-09 03:19:47 UTC</createdTime>
-<ownerDesignName>ventasDER</ownerDesignName>
+<ownerDesignName>ventasDER1</ownerDesignName>
 <engineerTo>
 <item key="6D193A42-6FE7-B6BA-A7C1-968E1F37B2B9" value="true"/>
 </engineerTo>
@@ -18,7 +18,7 @@
 <Attribute name="id_pago" id="8BE2131C-8A68-C87D-CAE6-8F6FECA568B7">
 <createdBy>renemm</createdBy>
 <createdTime>2020-12-09 03:19:59 UTC</createdTime>
-<ownerDesignName>ventasDER</ownerDesignName>
+<ownerDesignName>ventasDER1</ownerDesignName>
 <engineerTo>
 <item key="6D193A42-6FE7-B6BA-A7C1-968E1F37B2B9" value="true"/>
 </engineerTo>
@@ -31,7 +31,7 @@
 <Attribute name="nombre" id="5891F98D-A471-CB8C-4EBB-29011A3798E0">
 <createdBy>renemm</createdBy>
 <createdTime>2020-12-09 03:20:06 UTC</createdTime>
-<ownerDesignName>ventasDER</ownerDesignName>
+<ownerDesignName>ventasDER1</ownerDesignName>
 <engineerTo>
 <item key="6D193A42-6FE7-B6BA-A7C1-968E1F37B2B9" value="true"/>
 </engineerTo>
@@ -44,7 +44,7 @@
 <Attribute name="monto" id="E8547B5A-475F-B782-C753-F9C947910BC1">
 <createdBy>renemm</createdBy>
 <createdTime>2020-12-09 03:20:13 UTC</createdTime>
-<ownerDesignName>ventasDER</ownerDesignName>
+<ownerDesignName>ventasDER1</ownerDesignName>
 <engineerTo>
 <item key="6D193A42-6FE7-B6BA-A7C1-968E1F37B2B9" value="true"/>
 </engineerTo>
@@ -58,7 +58,7 @@
 <identifier id="F9D56964-282F-8A68-3A5A-D6FD2DD63391" name="Pago PK">
 <createdBy>renemm</createdBy>
 <createdTime>2020-12-09 03:20:05 UTC</createdTime>
-<ownerDesignName>ventasDER</ownerDesignName>
+<ownerDesignName>ventasDER1</ownerDesignName>
 <engineerTo>
 <item key="6D193A42-6FE7-B6BA-A7C1-968E1F37B2B9" value="true"/>
 </engineerTo>

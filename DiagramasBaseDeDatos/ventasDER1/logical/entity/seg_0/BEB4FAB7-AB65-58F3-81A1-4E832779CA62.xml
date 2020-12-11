@@ -1,8 +1,8 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="65869182-AF45-BA0D-8BE9-36EAF149BB00" name="Pago">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BEB4FAB7-AB65-58F3-81A1-4E832779CA62" name="Producto">
 <createdBy>renemm</createdBy>
-<createdTime>2020-12-09 03:19:47 UTC</createdTime>
-<ownerDesignName>ventasDER</ownerDesignName>
+<createdTime>2020-12-10 17:11:02 UTC</createdTime>
+<ownerDesignName>ventasDER1</ownerDesignName>
 <engineerTo>
 <item key="6D193A42-6FE7-B6BA-A7C1-968E1F37B2B9" value="true"/>
 </engineerTo>
@@ -15,36 +15,47 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_pago" id="8BE2131C-8A68-C87D-CAE6-8F6FECA568B7">
+<Attribute name="id_producto" id="6700C6DB-383E-CCD0-FDFD-5637D1CFFB93">
 <createdBy>renemm</createdBy>
-<createdTime>2020-12-09 03:19:59 UTC</createdTime>
-<ownerDesignName>ventasDER</ownerDesignName>
+<createdTime>2020-12-10 17:11:15 UTC</createdTime>
+<ownerDesignName>ventasDER1</ownerDesignName>
 <engineerTo>
 <item key="6D193A42-6FE7-B6BA-A7C1-968E1F37B2B9" value="true"/>
 </engineerTo>
-<sourceType>System</sourceType>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nombre" id="5891F98D-A471-CB8C-4EBB-29011A3798E0">
+<Attribute name="nom_producto" id="4D91D744-B08B-2FD4-54AA-90375334A163">
 <createdBy>renemm</createdBy>
-<createdTime>2020-12-09 03:20:06 UTC</createdTime>
-<ownerDesignName>ventasDER</ownerDesignName>
+<createdTime>2020-12-10 17:11:34 UTC</createdTime>
+<ownerDesignName>ventasDER1</ownerDesignName>
 <engineerTo>
 <item key="6D193A42-6FE7-B6BA-A7C1-968E1F37B2B9" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="monto" id="E8547B5A-475F-B782-C753-F9C947910BC1">
+<Attribute name="talla" id="A5ECB6F6-52DF-0A49-F753-B0B17F94BA07">
 <createdBy>renemm</createdBy>
-<createdTime>2020-12-09 03:20:13 UTC</createdTime>
-<ownerDesignName>ventasDER</ownerDesignName>
+<createdTime>2020-12-10 17:12:11 UTC</createdTime>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<engineerTo>
+<item key="6D193A42-6FE7-B6BA-A7C1-968E1F37B2B9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="precio" id="BFC5AABC-D1F2-FE62-CBF4-C9D4BBD1A774">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-10 17:12:30 UTC</createdTime>
+<ownerDesignName>ventasDER1</ownerDesignName>
 <engineerTo>
 <item key="6D193A42-6FE7-B6BA-A7C1-968E1F37B2B9" value="true"/>
 </engineerTo>
@@ -55,16 +66,16 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="F9D56964-282F-8A68-3A5A-D6FD2DD63391" name="Pago PK">
+<identifier id="87D3C286-C123-D0B0-1AC4-AD60407A70D3" name="Producto PK">
 <createdBy>renemm</createdBy>
-<createdTime>2020-12-09 03:20:05 UTC</createdTime>
-<ownerDesignName>ventasDER</ownerDesignName>
+<createdTime>2020-12-10 17:11:30 UTC</createdTime>
+<ownerDesignName>ventasDER1</ownerDesignName>
 <engineerTo>
 <item key="6D193A42-6FE7-B6BA-A7C1-968E1F37B2B9" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>8BE2131C-8A68-C87D-CAE6-8F6FECA568B7</attributeRef>
+<attributeRef>6700C6DB-383E-CCD0-FDFD-5637D1CFFB93</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

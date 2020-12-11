@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B1034D09-C3B6-BFC8-6288-43161DC5D393" name="Pago">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-10 18:06:41 UTC</createdTime>
+<generatorID>65869182-AF45-BA0D-8BE9-36EAF149BB00</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_pago" id="39CA47F7-A60F-6910-5FF9-04D7DA5563BD">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-10 18:06:41 UTC</createdTime>
+<generatorID>8BE2131C-8A68-C87D-CAE6-8F6FECA568B7</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<sourceType>System</sourceType>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="363E9E03-0C7F-CA12-0AEF-6A122622944C">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-10 18:06:41 UTC</createdTime>
+<generatorID>5891F98D-A471-CB8C-4EBB-29011A3798E0</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="monto" id="2359FA92-60B2-8E2C-0FDF-3117396967E2">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-10 18:06:41 UTC</createdTime>
+<generatorID>E8547B5A-475F-B782-C753-F9C947910BC1</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="43600344-74F0-5127-8AB9-B4137C3A3803" name="Pago_PK">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-10 18:06:41 UTC</createdTime>
+<generatorID>F9D56964-282F-8A68-3A5A-D6FD2DD63391</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="39CA47F7-A60F-6910-5FF9-04D7DA5563BD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
