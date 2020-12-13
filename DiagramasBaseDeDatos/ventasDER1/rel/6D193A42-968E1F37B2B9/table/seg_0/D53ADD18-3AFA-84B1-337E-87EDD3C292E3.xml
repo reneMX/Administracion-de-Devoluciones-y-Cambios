@@ -13,9 +13,7 @@
 <createdTime>2020-12-10 18:06:41 UTC</createdTime>
 <generatorID>9F35916A-378B-6289-8B67-D75273895921</generatorID>
 <ownerDesignName>ventasDER1</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
+<use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -24,11 +22,8 @@
 <createdTime>2020-12-10 18:06:41 UTC</createdTime>
 <generatorID>AF8104EC-C09F-2039-C094-200DADC73295</generatorID>
 <ownerDesignName>ventasDER1</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>200</dataTypeSize>
-<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="nom_empleado_realiza" id="68E9EEBE-C000-3225-FAD1-93A5C89D4A26">
@@ -36,11 +31,8 @@
 <createdTime>2020-12-10 18:06:41 UTC</createdTime>
 <generatorID>7791A69F-51B8-7C95-BC56-67FE8BA5F614</generatorID>
 <ownerDesignName>ventasDER1</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>200</dataTypeSize>
-<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="nom_producto" id="5BC8EFF6-789B-655F-F233-40EA04A99594">
@@ -48,11 +40,8 @@
 <createdTime>2020-12-10 18:06:41 UTC</createdTime>
 <generatorID>81B10555-F206-C8C1-2CBB-18B8D8D9179E</generatorID>
 <ownerDesignName>ventasDER1</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>150</dataTypeSize>
-<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="numero_venta" id="B1333524-9161-3C35-1901-9BA0130427B3">
@@ -60,9 +49,7 @@
 <createdTime>2020-12-10 18:06:41 UTC</createdTime>
 <generatorID>941FBEDA-62D5-7981-7DD0-E3101D3A70BA</generatorID>
 <ownerDesignName>ventasDER1</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
+<use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -71,11 +58,8 @@
 <createdTime>2020-12-10 18:06:41 UTC</createdTime>
 <generatorID>8F46D3E2-9B67-FD26-5FF8-6A94FD0809C1</generatorID>
 <ownerDesignName>ventasDER1</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="precio_dev" id="9DDEF24E-FCAE-0F96-AED7-7891FD74DA5E">
@@ -83,9 +67,7 @@
 <createdTime>2020-12-10 18:06:41 UTC</createdTime>
 <generatorID>8D6018D4-5320-6D09-2248-C3A92447B074</generatorID>
 <ownerDesignName>ventasDER1</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT020</logicalDatatype>
+<use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -94,11 +76,8 @@
 <createdTime>2020-12-10 18:06:41 UTC</createdTime>
 <generatorID>42C5CD19-2565-5FE1-8CB7-A93A28896BE8</generatorID>
 <ownerDesignName>ventasDER1</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>150</dataTypeSize>
-<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="total_dev" id="5661581F-BEA9-0F3A-1A5D-21B8400CC819">
@@ -106,9 +85,7 @@
 <createdTime>2020-12-10 18:06:41 UTC</createdTime>
 <generatorID>4A00F2C8-0802-E0C4-196B-0FDDF988022D</generatorID>
 <ownerDesignName>ventasDER1</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT020</logicalDatatype>
+<use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -117,11 +94,8 @@
 <createdTime>2020-12-10 18:06:41 UTC</createdTime>
 <generatorID>28793BF6-C8C7-8838-E099-9B68D03F957D</generatorID>
 <ownerDesignName>ventasDER1</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>200</dataTypeSize>
-<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="comentarios_dev" id="3A90738F-AE80-70D5-AD23-D4898271FDE0">
@@ -130,11 +104,8 @@
 <generatorID>F09FE54B-D203-1D54-F74D-3E760122236A</generatorID>
 <ownerDesignName>ventasDER1</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>500</dataTypeSize>
-<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>

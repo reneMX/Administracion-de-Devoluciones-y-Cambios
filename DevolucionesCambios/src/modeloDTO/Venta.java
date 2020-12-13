@@ -1,4 +1,4 @@
-package modelo;
+package modeloDTO;
 
 
 import java.time.LocalDateTime;
@@ -12,7 +12,7 @@ public class Venta {
      /**
      * 
      */
-    private LocalDateTime fecha;
+    private String fecha;
 
     /**
      * 
@@ -22,7 +22,7 @@ public class Venta {
     /**
      * 
      */
-    private int num_vnta;
+    private int num_venta;
 
     /**
      * 
@@ -42,7 +42,7 @@ public class Venta {
     /**
      * 
      */
-    private  ArrayList<Producto> productos;
+    private  List<Producto> productos;
     
     
     /**
@@ -72,24 +72,29 @@ public class Venta {
     {
         
     }
+    
+    public Venta(String  fecha_venta, String nombre_empleado , String nombre_tienda, String direccion_tienda, double total_venta) {
 
-    public Venta(int id_ventas, int id_producto, int id_pago) {
-        this.id_ventas = id_ventas;
-        this.id_producto = id_producto;
-        this.id_pago = id_pago;
+        this.fecha = fecha_venta;
+        this.nom_Empleado = nombre_empleado;
+        this.nom_tienda = nombre_tienda;
+        this.direccion = direccion_tienda;
+        this.total = total_venta;
     }
     
+    
+    
 
-    public Venta(LocalDateTime fecha, String nom_Empleado, int num_vnta, String nom_tienda, String direccion, double total, ArrayList<Producto> productos, Pago pago) {
+    public Venta(int numero_venta, String fecha,ArrayList<Producto> productos, double total, String nom_Empleado, String nom_tienda) {
+        this.num_venta = numero_venta;
         this.fecha = fecha;
-        this.nom_Empleado = nom_Empleado;
-        this.num_vnta = num_vnta;
-        this.nom_tienda = nom_tienda;
-        this.direccion = direccion;
-        this.total = total;
         this.productos = productos;
-        this.pago = pago;
+        this.total = total;
+        this.nom_Empleado = nom_Empleado;        
+        this.nom_tienda = nom_tienda;
     }
+
+    
 
    
 
@@ -112,11 +117,11 @@ public class Venta {
         return false;
     }
 
-    public LocalDateTime getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(LocalDateTime fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 
@@ -128,12 +133,12 @@ public class Venta {
         this.nom_Empleado = nom_Empleado;
     }
 
-    public int getNum_vnta() {
-        return num_vnta;
+    public int getNum_venta() {
+        return num_venta;
     }
 
-    public void setNum_vnta(int num_vnta) {
-        this.num_vnta = num_vnta;
+    public void setNum_venta(int num_venta) {
+        this.num_venta = num_venta;
     }
 
     public String getNom_tienda() {
@@ -160,11 +165,11 @@ public class Venta {
         this.total = total;
     }
 
-    public ArrayList<Producto> getProductos() {
+    public List<Producto> getProductos() {
         return productos;
     }
 
-    public void setProductos(ArrayList<Producto> productos) {
+    public void setProductos(List<Producto> productos) {
         this.productos = productos;
     }
 
@@ -178,9 +183,36 @@ public class Venta {
 
     @Override
     public String toString() {
-        return "Venta{" + "fecha=" + fecha + ", nom_Empleado=" + nom_Empleado + ", num_vnta=" + num_vnta + ", nom_tienda=" + nom_tienda + ", direccion=" + direccion + ", total=" + total + ", productos=" + productos + ", pago=" + pago + ", id_ventas=" + id_ventas + ", id_producto=" + id_producto + ", id_pago=" + id_pago + '}';
+        return "Venta{" + "fecha=" + fecha + ", nom_Empleado=" + nom_Empleado + ", num_vnta=" + num_venta + ", nom_tienda=" + nom_tienda + ", direccion=" + direccion + ", total=" + total + ", productos=" + productos + ", pago=" + pago + ", id_ventas=" + id_ventas + ", id_producto=" + id_producto + ", id_pago=" + id_pago + '}';
     }
 
+    public void setId_ventas(int id_ventas) {
+        this.id_ventas = id_ventas;
+    }
+
+    public void setId_producto(int id_producto) {
+        this.id_producto = id_producto;
+    }
+
+    public void setId_pago(int id_pago) {
+        this.id_pago = id_pago;
+    }
+
+    public int getId_ventas() {
+        return id_ventas;
+    }
+
+    public int getId_producto() {
+        return id_producto;
+    }
+
+    public int getId_pago() {
+        return id_pago;
+    }
+
+    
+    //        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss.SSS");
+//        LocalDateTime fch = LocalDateTime.parse(fecha_venta, formatter);
     
     
     

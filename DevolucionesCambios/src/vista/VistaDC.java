@@ -5,19 +5,14 @@
  */
 package vista;
 
-import java.awt.Component;
+
 import java.awt.Dimension;
-import java.awt.event.ActionListener;
-import java.awt.event.AdjustmentListener;
-import javafx.event.ActionEvent;
 import javax.swing.JButton;
 import javax.swing.JLabel;
-import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.JTextField;
-import javax.swing.table.TableCellRenderer;
-import javax.swing.table.TableColumnModel;
+
 
 /**
  *
@@ -111,11 +106,11 @@ public class VistaDC extends javax.swing.JFrame {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "Fecha", "Num venta", "Empleado", "Tienda", "Direccion", "Total"
+                "Numero de Venta", "Fecha de Compra", "Productos", "Total", "Empleado ", "Tienda"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
                 false, false, false, false, false, false
@@ -130,14 +125,6 @@ public class VistaDC extends javax.swing.JFrame {
             }
         });
         jScrollPane2.setViewportView(tbl_info);
-        if (tbl_info.getColumnModel().getColumnCount() > 0) {
-            tbl_info.getColumnModel().getColumn(0).setHeaderValue("Fecha");
-            tbl_info.getColumnModel().getColumn(1).setHeaderValue("Num venta");
-            tbl_info.getColumnModel().getColumn(2).setHeaderValue("Empleado");
-            tbl_info.getColumnModel().getColumn(3).setHeaderValue("Tienda");
-            tbl_info.getColumnModel().getColumn(4).setHeaderValue("Direccion");
-            tbl_info.getColumnModel().getColumn(5).setHeaderValue("Total");
-        }
 
         panel_info.setVisible(false);
 

@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="23C96F7A-E998-AFE7-D348-2EADB9BF08C3" name="Venta-Producto">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-13 01:15:28 UTC</createdTime>
+<generatorID>BD9278ED-9984-8C61-BF5F-FC2458791A12</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Venta_id_venta" id="D62507C0-8C17-D9B7-A46D-9B2D730DEF66">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-13 01:15:28 UTC</createdTime>
+<generatorID>32825351-4C78-CDC6-1840-99A9A12961D7</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="448261AD-9F1C-1FF0-11F0-F79D51823640" referredColumn="783CDD5A-1245-ED70-C551-5AB156B57EAC"/>
+</associations>
+</Column>
+<Column name="Producto_id_producto" id="423B7AF5-0FB1-4DDC-7B25-EB2EB62DB3F8">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-13 01:15:28 UTC</createdTime>
+<generatorID>FFFB4D19-CAA7-9DB2-4BF3-0160542D11A0</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="92E3B459-4520-40A9-9489-3A33EF4380BF" referredColumn="C8FF5C4B-6151-46A0-135C-9D9F205D2635"/>
+</associations>
+</Column>
+<Column name="id_venta-producto" id="460F7000-177F-F694-C0D1-5117D4CEDEAF">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-13 01:15:28 UTC</createdTime>
+<generatorID>76AF0FB8-FFA9-3CD6-745D-B8226273662A</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A1938C8D-AB75-DD32-4FE3-B9E62253A5DD" name="Venta-Producto_PK">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-13 01:15:28 UTC</createdTime>
+<generatorID>4849ABF6-4CCC-164D-04AA-E387B122FDA2</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="460F7000-177F-F694-C0D1-5117D4CEDEAF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CC9D585D-F1E2-A1AC-573B-B1725EA7EDFA" name="Venta-Producto_Producto_FK">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-13 01:15:28 UTC</createdTime>
+<generatorID>40C17BB4-2386-2847-E214-153FC43C8CDF</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="423B7AF5-0FB1-4DDC-7B25-EB2EB62DB3F8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EF83E713-8FD6-4C8A-0ABD-CA56683CCFD6" name="Venta-Producto_Venta_FK">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-13 01:15:28 UTC</createdTime>
+<generatorID>06D59CE2-CF68-EE8B-9AF5-7C5CFCC2F2C3</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D62507C0-8C17-D9B7-A46D-9B2D730DEF66"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

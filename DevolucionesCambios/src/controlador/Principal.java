@@ -9,13 +9,16 @@ import BDD.Conexion;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import modelo.Efectivo;
-import modelo.Venta;
+import modeloDAO.ProductoDAO;
+import modeloDAO.VentaDAO;
+import modeloDTO.Efectivo;
+import modeloDTO.Venta;
 import vista.VistaDC;
-import modelo.Producto;
-import vista.Devoluciones;
+import modeloDTO.Producto;
+import vista.VistaDevoluciones;
 
 /**
  *
@@ -31,14 +34,43 @@ import vista.Devoluciones;
             LocalDateTime fecha = LocalDateTime.now();
             Efectivo pago = new Efectivo(12002,"Dinero", 926);
             Producto pantalon = new Producto("Jeans Vans",30,1200);
-            ArrayList<Producto> productos = new ArrayList<Producto>();
-            productos.add(pantalon);
-            Venta venta = new Venta(fecha,"Rene",9029,"Sucursal Las Antenas","Iztapalapa,18,29",1829,productos,pago);
-
-            VistaDC vista =  new VistaDC();
-            Devoluciones dev = new Devoluciones();
             
-//            Conexion conexion = new Conexion();
+           
+            Controlador controlador = new Controlador();
+//            
+//            vista.setVisible(true);
+            controlador.iniciar();
+
+            
+            
+            List<Producto> productos = new ArrayList<Producto>();
+//            productos.add(pantalon);
+//            
+            
+            
+            
+            
+//            Venta venta = new Venta(fecha,"Rene",9029,"Sucursal Las Antenas","Iztapalapa,18,29",1829,productos,pago);
+            
+            //VistaDevoluciones dev = new VistaDevoluciones();
+            
+            //Conexion conexion = new Conexion();
+            //Venta venta = new Venta(fecha, "Jose Alfredo","Lineclothes","Iztapalapa 18",192.3 );
+//            VentaDAO ventaDao = new VentaDAO();
+//            Venta venta = new Venta();
+//            venta = ventaDao.ventaValida(9029);
+//            
+//            venta.getProductos().forEach((n) -> System.out.println(n.getTalla()) ); 
+//             productos.forEach((n) -> System.out.println(n.getNombre())); 
+//            boolean val = ventaDao.validaVenta(9029);
+//            System.out.println(val);
+                       
+//            ventaDao.validaVenta(12345);
+//            ventaDao.toString();
+        
+//            System.out.println(val );
+            
+            
             //conexion.guardarVenta(venta);
             
 //            try {
@@ -52,12 +84,7 @@ import vista.Devoluciones;
             
       //      dev.setVisible(true);
       
-
-            Controlador controlador = new Controlador(vista, venta, dev);
             
-            controlador.iniciar();
-            vista.setVisible(true);
-
             
         }
     }

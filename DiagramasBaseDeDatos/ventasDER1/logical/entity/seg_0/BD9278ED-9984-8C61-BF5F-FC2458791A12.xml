@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BEB4FAB7-AB65-58F3-81A1-4E832779CA62" name="Producto">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BD9278ED-9984-8C61-BF5F-FC2458791A12" name="Venta-Producto">
 <createdBy>renemm</createdBy>
-<createdTime>2020-12-10 17:11:02 UTC</createdTime>
+<createdTime>2020-12-13 01:09:46 UTC</createdTime>
 <ownerDesignName>ventasDER1</ownerDesignName>
 <engineerTo>
 <item key="6D193A42-6FE7-B6BA-A7C1-968E1F37B2B9" value="true"/>
@@ -15,9 +15,37 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_producto" id="6700C6DB-383E-CCD0-FDFD-5637D1CFFB93">
+<Attribute name="id_venta" id="32825351-4C78-CDC6-1840-99A9A12961D7">
 <createdBy>renemm</createdBy>
-<createdTime>2020-12-10 17:11:15 UTC</createdTime>
+<createdTime>2020-12-13 01:11:11 UTC</createdTime>
+<generatorID>06D59CE2-CF68-EE8B-9AF5-7C5CFCC2F2C3</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<engineerTo>
+<item key="6D193A42-6FE7-B6BA-A7C1-968E1F37B2B9" value="true"/>
+</engineerTo>
+<referedAttribute>7346E0E7-CB28-12F3-F12C-5A6993F6EF22</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_producto" id="FFFB4D19-CAA7-9DB2-4BF3-0160542D11A0">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-13 01:11:22 UTC</createdTime>
+<generatorID>40C17BB4-2386-2847-E214-153FC43C8CDF</generatorID>
+<ownerDesignName>ventasDER1</ownerDesignName>
+<engineerTo>
+<item key="6D193A42-6FE7-B6BA-A7C1-968E1F37B2B9" value="true"/>
+</engineerTo>
+<referedAttribute>6700C6DB-383E-CCD0-FDFD-5637D1CFFB93</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_venta-producto" id="76AF0FB8-FFA9-3CD6-745D-B8226273662A">
+<createdBy>renemm</createdBy>
+<createdTime>2020-12-13 01:12:46 UTC</createdTime>
 <ownerDesignName>ventasDER1</ownerDesignName>
 <engineerTo>
 <item key="6D193A42-6FE7-B6BA-A7C1-968E1F37B2B9" value="true"/>
@@ -25,58 +53,20 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="nom_producto" id="4D91D744-B08B-2FD4-54AA-90375334A163">
-<createdBy>renemm</createdBy>
-<createdTime>2020-12-10 17:11:34 UTC</createdTime>
-<ownerDesignName>ventasDER1</ownerDesignName>
-<engineerTo>
-<item key="6D193A42-6FE7-B6BA-A7C1-968E1F37B2B9" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>150</dataTypeSize>
-<ownDataTypeParameters>150,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="talla" id="A5ECB6F6-52DF-0A49-F753-B0B17F94BA07">
-<createdBy>renemm</createdBy>
-<createdTime>2020-12-10 17:12:11 UTC</createdTime>
-<ownerDesignName>ventasDER1</ownerDesignName>
-<engineerTo>
-<item key="6D193A42-6FE7-B6BA-A7C1-968E1F37B2B9" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="precio" id="BFC5AABC-D1F2-FE62-CBF4-C9D4BBD1A774">
-<createdBy>renemm</createdBy>
-<createdTime>2020-12-10 17:12:30 UTC</createdTime>
-<ownerDesignName>ventasDER1</ownerDesignName>
-<engineerTo>
-<item key="6D193A42-6FE7-B6BA-A7C1-968E1F37B2B9" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT020</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="87D3C286-C123-D0B0-1AC4-AD60407A70D3" name="Producto PK">
+<identifier id="4849ABF6-4CCC-164D-04AA-E387B122FDA2" name="Venta-Producto PK">
 <createdBy>renemm</createdBy>
-<createdTime>2020-12-10 17:11:30 UTC</createdTime>
+<createdTime>2020-12-13 01:13:02 UTC</createdTime>
 <ownerDesignName>ventasDER1</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="6D193A42-6FE7-B6BA-A7C1-968E1F37B2B9" value="false"/>
+<item key="6D193A42-6FE7-B6BA-A7C1-968E1F37B2B9" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>6700C6DB-383E-CCD0-FDFD-5637D1CFFB93</attributeRef>
+<attributeRef>76AF0FB8-FFA9-3CD6-745D-B8226273662A</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

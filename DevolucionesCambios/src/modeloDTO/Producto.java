@@ -1,4 +1,4 @@
-package modelo;
+package modeloDTO;
 
 
 import java.util.*;
@@ -9,7 +9,7 @@ import java.util.*;
 public class Producto {
 
     
-      public Producto(String nombre, int talla, double precio) {
+    public Producto(String nombre, int talla, double precio) {
         this.nombre = nombre;
         this.talla = talla;
         this.precio = precio;
@@ -41,6 +41,8 @@ public class Producto {
     /**
      * 
      */
+    
+    
     public void Producto() {
         // TODO implement here
     }
@@ -53,4 +55,31 @@ public class Producto {
         return 0.0d;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getTalla() {
+        return talla;
+    }
+
+    public void setTalla(int talla) {
+        this.talla = talla;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    
+    
+    
 }

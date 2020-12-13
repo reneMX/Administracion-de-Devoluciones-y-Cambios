@@ -117,28 +117,15 @@
 <logicalDatatype>LOGDT020</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_producto" id="9938E6BC-C214-AB68-104F-29BD306D6077">
-<createdBy>renemm</createdBy>
-<createdTime>2020-12-10 17:12:58 UTC</createdTime>
-<generatorID>CBC753A7-2AE7-C19D-AAEC-FB537AFFB0B9</generatorID>
-<ownerDesignName>ventasDER1</ownerDesignName>
-<engineerTo>
-<item key="6D193A42-6FE7-B6BA-A7C1-968E1F37B2B9" value="true"/>
-</engineerTo>
-<referedAttribute>6700C6DB-383E-CCD0-FDFD-5637D1CFFB93</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="148057D7-447A-6965-A038-BB608750D34E" name="Venta PK">
 <createdBy>renemm</createdBy>
 <createdTime>2020-12-09 03:21:49 UTC</createdTime>
 <ownerDesignName>ventasDER1</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="6D193A42-6FE7-B6BA-A7C1-968E1F37B2B9" value="true"/>
+<item key="6D193A42-6FE7-B6BA-A7C1-968E1F37B2B9" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

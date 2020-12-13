@@ -45,9 +45,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="6679DA39-85A6-FDA8-018A-B64ACC61A0AC" referredColumn="C8FF5C4B-6151-46A0-135C-9D9F205D2635"/>
-</associations>
 </Column>
 <Column name="num_venta" id="66B36FC9-B28E-0E33-AB1D-7961905CEE4C">
 <createdBy>renemm</createdBy>
@@ -131,17 +128,6 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="783CDD5A-1245-ED70-C551-5AB156B57EAC"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="91BEBA5F-C79B-9871-8D8C-6BF7B2FDF2EC" name="Venta_Producto_FK">
-<createdBy>renemm</createdBy>
-<createdTime>2020-12-10 18:06:41 UTC</createdTime>
-<generatorID>CBC753A7-2AE7-C19D-AAEC-FB537AFFB0B9</generatorID>
-<ownerDesignName>ventasDER1</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="891A5ED3-4B4F-6B01-D354-48887AA4A142"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="9E2706D4-11F6-8E96-BC61-260BC47DC1FC" name="Venta_Pago_FK">
