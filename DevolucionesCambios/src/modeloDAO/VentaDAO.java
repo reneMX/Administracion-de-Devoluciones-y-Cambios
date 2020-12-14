@@ -10,15 +10,10 @@ import static BDD.Conexion.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
 import java.sql.SQLException;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import modeloDTO.Pago;
 import modeloDTO.Producto;
 import modeloDTO.Venta;
 
@@ -32,7 +27,9 @@ public class VentaDAO {
     private static final String SQL_INSERT = "INSERT INTO Ventas (fch_venta, nombre_empleado, nombre_tienda, direccion_tienda, total_venta) VALUES(?,?,?,?,?)";
     private static final String SQL_SELECT_NUM_VENTAS = "SELECT num_venta, fch_venta, total_venta, nombre_empleado, nombre_tienda FROM Ventas WHERE num_venta =";
     private static final String SQL_SELECT_VALID_VENTAS= "SELECT num_venta FROM Ventas WHERE num_venta = ";
-    private static final String SQL_SELECT_ID_PAGOS = "SELECT id_pagos FROM Pagos ORDER BY id_pagos DESC LIMIT 1";
+    private static final String SQL_SELECT_PAGOS= "SELECT nombre, monto FROM Pagos RIGHT JOIN ventas_productos ON Pagos.id_pagos = ventas_productos.id_producto WHERE ventas_productos.id_venta = ";
+    
+//    private static final String SQL_SELECT_ID_PAGOS = "SELECT id_pagos FROM Pagos ORDER BY id_pagos DESC LIMIT 1";
     private static final String SQL_SELECT_P_ASOCIADOS= "SELECT * FROM Productos RIGHT JOIN ventas_productos ON Productos.id_productos = ventas_productos.id_producto WHERE ventas_productos.id_venta =";
 
     
@@ -47,7 +44,7 @@ public VentaDAO(){
     
 /*METODOS*/
 
-public List<Venta> seleccionar()
+public Venta seleccionar()
 {
     Connection conn = null;
     PreparedStatement stmt = null;
@@ -70,7 +67,7 @@ public List<Venta> seleccionar()
             String direccion_tienda   = rs.getString("direccion_tienda");
             double total_venta = rs.getInt("total_venta");
 
-//            fch  = LocalDateTime.parse(fch_venta , formatter);
+
             venta = new Venta();
             venta.setNum_venta(num_venta);
             venta.setFecha(fch_venta);
@@ -79,8 +76,6 @@ public List<Venta> seleccionar()
             venta.setDireccion(direccion_tienda);
             venta.setTotal(total_venta);
 
-
-            ventas.add(venta);
         }//fin while
     } catch (SQLException ex) {
                             ex.printStackTrace(System.out);
@@ -94,7 +89,7 @@ public List<Venta> seleccionar()
                                         }//fin try-catch interno
                                     }//fin del finally
 
-    return ventas;
+    return venta;
 }
 
                 
@@ -228,12 +223,7 @@ public Venta ventaValida(int num_venta)
                 double total = rs.getDouble("total_venta");
                 String nombre_e = rs.getString("nombre_empleado");
                 String nombre_t = rs.getString("nombre_tienda");
-//                modelo.addColumn("Numero de Venta ");
-//                modelo.addColumn("Fecha de compra");
-//                modelo.addColumn("Nombre de Productos");
-//                modelo.addColumn("Total");
-//                modelo.addColumn("Empleado");  
-//                modelo.addColumn("Tienda");
+
                 venta.setNum_venta(numero_venta);
                 venta.setFecha(fch);
                 venta.setTotal(total);
@@ -259,6 +249,57 @@ public Venta ventaValida(int num_venta)
     
     
 }//fin ventaValida()
+
+
+
+public Pago obtenPago(int num_venta)
+{
+        Connection conn          = null;
+        PreparedStatement stmt   = null;
+        ResultSet rs             = null;
+        Pago pago    =    new Pago() ; 
+
+        
+        boolean val = false;
+        try {
+            conn = getConnection();
+            stmt = conn.prepareStatement(SQL_SELECT_PAGOS+num_venta);
+            rs = stmt.executeQuery();
+           
+            int i = 0;
+            
+            while (rs.next())
+            {
+                
+                String nombre = rs.getString("nombre");
+                double monto = rs.getDouble("monto") ;
+                
+                pago.setNombre(nombre);
+                pago.setMonto(monto);
+                
+
+            }//fin while
+
+        } catch (SQLException ex) {
+                                ex.printStackTrace(System.out);
+                            } finally {
+                                            try {
+                                                Conexion.close(rs);
+                                                Conexion.close(stmt);
+                                                Conexion.close(conn);
+                                            } catch (SQLException ex) {
+                                                ex.printStackTrace(System.out);
+                                            }//fin try-catch interno
+                                        }//fin del finally
+        return pago;    
+    
+    
+}//fin ventaValida()
+
+
+
+
+
 
 
 }//fin VentaDAO

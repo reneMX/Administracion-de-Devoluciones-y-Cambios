@@ -35,6 +35,11 @@ import vista.VistaDevoluciones;
             Efectivo pago = new Efectivo(12002,"Dinero", 926);
             Producto pantalon = new Producto("Jeans Vans",30,1200);
             
+            
+            
+//            VentaDAO venta_dao = new VentaDAO();
+//            System.out.println(venta_dao.seleccionar().getDireccion() );
+            
            
             Controlador controlador = new Controlador();
 //            
@@ -43,7 +48,11 @@ import vista.VistaDevoluciones;
 
             
             
-            List<Producto> productos = new ArrayList<Producto>();
+//            List<Producto> productos = new ArrayList<Producto>();
+//            
+//            productos = producto_dao.seleccionar();
+//            
+//            productos.forEach((n) -> System.out.println(n.get )); 
 //            productos.add(pantalon);
 //            
             

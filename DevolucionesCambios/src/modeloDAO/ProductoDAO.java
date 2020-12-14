@@ -57,6 +57,8 @@ public int insertaProducto(Producto producto){
         return registros;
 }//fin insertaProducto
 
+
+
 public List<Producto> seleccionar()
     {
         Connection conn = null;

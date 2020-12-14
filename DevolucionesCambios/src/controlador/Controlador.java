@@ -6,23 +6,30 @@
 package controlador;
 
 import BDD.Conexion;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Time;
+import java.awt.print.PrinterException;
+import java.awt.print.PrinterJob;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import modeloDAO.VentaDAO;
+import modeloDTO.Pago;
 import modeloDTO.Producto;
 import modeloDTO.Venta;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.PDPage;
+import org.apache.pdfbox.pdmodel.PDPageContentStream;
+import org.apache.pdfbox.pdmodel.common.PDRectangle;
+import org.apache.pdfbox.pdmodel.font.PDType1Font;
+import org.w3c.dom.Document;
 import vista.VistaDevoluciones;
 import vista.VistaDC;
-
+//import org.apache.pdfbox.
 /**
  *
  * @author renemm
@@ -36,8 +43,10 @@ public class Controlador implements ActionListener {
     private ActionListener escucha;
     private LocalDateTime fch_actual;
     private VentaDAO venta_dao;
+    private Pago pago;
 
     public Controlador() {
+        this.pago = new Pago();
         this.fch_actual = LocalDateTime.now();
         this.venta_dao = new VentaDAO();
         this.venta = new Venta();
@@ -55,6 +64,7 @@ public class Controlador implements ActionListener {
             ventana_p.getBtn_devoluciones().addActionListener(this);
             ventana_dev.getBtn_regresar().addActionListener(this);
             ventana_dev.getBtn_home().addActionListener(this);
+            ventana_dev.getBtn_genera_reporte().addActionListener(this);
         }catch(NullPointerException ex){
            ex.printStackTrace(System.out);
         }//fin catch
@@ -112,44 +122,141 @@ public class Controlador implements ActionListener {
                 }//fin if valida boton
 
         //MOSTRAMOS DEVOLUCIONES O CAMBIOS
-        if( c.equals(ventana_p.getBtn_cambios()) || c.equals(ventana_p.getBtn_devoluciones())  ) 
+        if(  c.equals(ventana_p.getBtn_devoluciones())  ) 
         {
-            ArrayList<String> devolucion =  new ArrayList<String>();
-            conexion = new Conexion();
-            System.out.println("Hola mundo");
+//            ArrayList<String> devolucion =  new ArrayList<String>();
+//            conexion = new Conexion();
+//            System.out.println("Hola mundo");
             ventana_p.setVisible(false);
             ventana_dev.setVisible(true);
             ventana_p.repaint();
+            muestraFormulario(num_venta);
 
-        }   
+        }//fin if boton devoluciones
+
+        
+        if(  c.equals(ventana_dev.getBtn_genera_reporte()) )
+        {  
+            generaReporte(num_venta);
+            
+        } //fin if boton genera reporte
+
+        
+        if(c.equals(ventana_p.getBtn_cambios()) ){
+            
+        }//fin if boton cambios
         
         //MOSTRAMOS LA VENTANA DE DEVOLUCIONES
         if(c.equals(ventana_dev.getBtn_regresar() ))//hacemos la validacion
         {
-           conexion = new Conexion();
-            
            ventana_dev.repaint();
            ventana_dev.setVisible(false);
            ventana_p.setVisible(true);
-           
-           
-
-           
-            
-            
-        }  
+    
+        } //fin boton regresar de ventana_dev
        
     }//fin metodo actionPerformed()
 
+    
+    public void generaReporte(int num_venta){
+          
+        try {        
+                PDDocument doc = new PDDocument();
+                PDPage pagina = new PDPage(PDRectangle.A6);
+
+                doc.addPage(pagina);
+                
+                PDPageContentStream contenido = new PDPageContentStream(doc, pagina);
+                
+                
+                contenido.beginText();
+                    contenido.setFont(PDType1Font.TIMES_BOLD, 30);
+                    contenido.newLineAtOffset(20, pagina.getMediaBox().getHeight() - 52);
+                    contenido.showText("LineClothes");
+                contenido.endText();
+                
+                contenido.beginText();
+                    contenido.setFont(PDType1Font.TIMES_BOLD, 20);
+                    contenido.newLineAtOffset(50, pagina.getMediaBox().getHeight() - 80);
+                    contenido.showText("Reporte de Devolucion");
+                contenido.endText();
+                
+                contenido.beginText();
+                    contenido.setFont(PDType1Font.TIMES_BOLD, 10);
+                    contenido.newLineAtOffset(10, pagina.getMediaBox().getHeight() - 130);
+                    contenido.showText("Nombre del Empleado que Atendio: " + ventana_dev.getTxt_nom_empleado().getText());
+                contenido.endText();    
+                
+                
+                
+                
+                contenido.beginText();
+                    contenido.setFont(PDType1Font.TIMES_BOLD, 10);
+                    contenido.newLineAtOffset(10, pagina.getMediaBox().getHeight() - 140);
+                    contenido.showText("Productos: " + venta.getProductos().get(1).getNombre());
+                contenido.endText();
+                
+//                contenido.beginText();
+//                    contenido.setFont(PDType1Font.TIMES_BOLD, 10);
+//                    contenido.newLineAtOffset(10, pagina.getMediaBox().getHeight() - 150);
+//                    contenido.showText("Forma de Pago: " + venta_dao. );
+//                contenido.endText();
+//                
+//                contenido.beginText();
+//                    contenido.setFont(PDType1Font.TIMES_BOLD, 10);
+//                    contenido.newLineAtOffset(10, pagina.getMediaBox().getHeight() - 160);
+//                    contenido.showText("Total Devuelto: " + venta_dao.obtenPago(num_venta).getMonto() );
+//                contenido.endText();
+//                
+//                contenido.beginText();
+//                    contenido.setFont(PDType1Font.TIMES_BOLD, 10);
+//                    contenido.newLineAtOffset(10, pagina.getMediaBox().getHeight() - 170);
+//                    contenido.showText("Numero de Venta: " + venta.getNum_venta());
+//                contenido.endText();
+//                
+//                contenido.beginText();
+//                    contenido.setFont(PDType1Font.TIMES_BOLD, 10);
+//                    contenido.newLineAtOffset(10, pagina.getMediaBox().getHeight() - 180);
+//                    contenido.showText("La tienda " + venta.getNom_tienda() + "Lamenta esta devolucion y se encargara\n de trabajar con mayor responsabilidad para la felicida de en la moda de sus clientes");
+//                contenido.endText();
+//                
+//                contenido.beginText();
+//                    contenido.setFont(PDType1Font.TIMES_BOLD, 10);
+//                    contenido.newLineAtOffset(10, pagina.getMediaBox().getHeight() - 190);
+//                    contenido.showText("Fecha de Devolucion: " + venta.getFecha());
+//                contenido.endText();
+//                
+//                contenido.beginText();
+//                    contenido.setFont(PDType1Font.TIMES_BOLD, 10);
+//                    contenido.newLineAtOffset(10, pagina.getMediaBox().getHeight() - 200);
+//                    contenido.showText("Direccion:"+ venta.getDireccion());
+//                contenido.endText();
+//                
+                
+                
+                
+                
+                
+                
+                contenido.close();
+                doc.save("/Users/renemm/Desktop/Aseguramiento/Line.pdf");
+                doc.close();
+            } catch (IOException  ex) {
+                Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+        
+    }//fin generaReporte
     
    public void muestraDatosVenta(int num_venta)
     {
         
         DefaultTableModel modelo = new DefaultTableModel ();
+        List<Producto> productos = new ArrayList<Producto>();
         Object [] filas;
         String fch_venta;
-        List<Producto> productos = new ArrayList<Producto>();
         
+       
         modelo.addColumn("Numero de Venta ");
         modelo.addColumn("Fecha de compra");
         modelo.addColumn("Nombre de Productos");
@@ -190,4 +297,53 @@ public class Controlador implements ActionListener {
                 }//fin for
             }//fin productos.size() > 0
     }//fin muestraDatosVenta();    
+   
+   
+   
+   public void muestraFormulario(int num_venta){
+       
+       ////
+       DefaultTableModel modelo = new DefaultTableModel ();
+       
+       
+       modelo.addColumn("Productos");
+       
+       Object [] filas;
+       int tam =  venta.getProductos().size();
+       filas = new Object[tam];
+        ventana_dev.getTbl_nombres().setModel(modelo);
+        ventana_dev.getTbl_nombres().enable(false); 
+       //LLenamos la Tabla 
+        if( tam > 0 )
+        {
+            int i = 0;
+            int j = 0;
+            int [] aux = new int[2];
+            for(i = 0 ; i < tam ; i++)
+            {
+                aux[i] = aux[i] + i;
+                
+                filas[i]    =  venta.getProductos().get(j).getNombre();
+                modelo.addRow(filas);
+                j++;
+              
+            }//fin for
+//            System.out.println(""+filas[0] + ""+filas[1]);
+            
+            
+        }//fin tam > 0 
+        
+        ventana_dev.getTxt_nom_empleado_primero().setText(venta.getNom_Empleado());
+        ventana_dev.getTxt_num_venta().setText(""+venta.getNum_venta());
+        ventana_dev.getTxt_direccion().setText(venta_dao.seleccionar().getDireccion());
+//        ventana_dev.getTxt_nom_pago().setText( );
+        ventana_dev.getTxt_total().setText(""+venta_dao.seleccionar().getTotal());
+        
+        //    venta.getTotal();
+        //    venta.getDireccion();
+    }
+   
+   
 } //Fin clase Controlador
+
+
